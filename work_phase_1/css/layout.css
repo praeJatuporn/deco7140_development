@@ -1,0 +1,20 @@
+/* Layout */
+
+.container {
+    height: 100vh;
+    /* Full viewpoint height */
+    width: 80vw;
+    /* 80% of the viewpoint width */
+    margin: 0 auto;
+    /* Centers the container horizontally */
+    background-color: lightgreen;
+    /* Light background for contrast */
+}
+
+/* Large screen (e.g., tables or desktops) */
+@media (min-width: 768px) {
+    .container {
+        width: 60vw;
+        /* 60% of the viewport width */
+    }
+}
