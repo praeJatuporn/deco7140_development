@@ -3,7 +3,7 @@
  * Keep track of external modules being used
  * */
 import { logMessage } from "./modules/logging.js";
-
+import { fetchTemperature } from "../js/modules/temperature.js";
 /**
  * CONSTANTS
  * Define values that don't change e.g. page titles, URLs, etc.
