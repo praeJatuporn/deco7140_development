@@ -1,0 +1,74 @@
+/* Reset all elements to a blank slate */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    font-family: inherit;
+    vertical-align: baseline;
+    background: transparent;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* Reset animations, transitions, and effects */
+*,
+*::before,
+*::after {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+    filter: none !important;
+    appearance: none;
+}
+
+/* Reset HTML and body height */
+html,
+body {
+    width: 100%;
+    height: 100%;
+    line-height: 1;
+    overflow-x: hidden;
+}
+
+/* Reset tables */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Reset form elements */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+    color: inherit;
+    background: none;
+    border: none;
+}
+
+/* Remove default focus styles */
+:focus {
+    outline: none !important;
+}
+
+/* Remove default button styling */
+button {
+    cursor: pointer;
+}
+
+/* Remove default link styling */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Prevent image border and enforce max-width */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}

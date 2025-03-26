@@ -1,0 +1,66 @@
+/* Font importing */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+:root {
+    --primary-color: #2c3e50;
+    /* Dark Blue */
+    --secondary-color: #3498db;
+    /* Bright Blue */
+    --accent-color: #e74c3c;
+    /* Red */
+    --text-color: #333;
+    /* Dark Grey */
+    --background-color: #f5f5f5;
+    /* Light Grey */
+}
+
+/* Font */
+body {
+    font-family: 'Inter', sans-serif;
+    /* new */
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+body {
+    color: #333;
+    /* color applies to text */
+    background-color: #f5f5f5;
+}
+
+/* Typography (Using Golden Ratio) */
+h1 {
+    font-size: 4.2rem;
+    /* 2.6 x 1.618 rounded */
+    color: #2c3e50;
+}
+
+h2 {
+    font-size: 2.6rem;
+    /* 4.2 ÷ 1.618 rounded */
+    font-weight: 700;
+    color: #333;
+}
+
+h3 {
+    font-size: 1.6rem;
+    /* 2.6 ÷ 1.618 rounded */
+    font-weight: 700;
+    color: #333;
+}
+
+p {
+    font-size: 1rem;
+    /* 2.6 ÷ 1.618 rounded */
+    color: #333;
+}
+
+/* line height */
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+    line-height: 1.5;
+}

@@ -1,6 +1,14 @@
 /* Global styles */
+:root{
+    --color-background:rgb(186, 220, 242);
+    --color-dark:rgb(2, 9, 14);
+    --color-heading:rgb(13, 23, 232);
+    --color-subheading:rgb(107, 93, 228);
+    --color-link:rgb(117, 5, 151);
+
+}
 body {
-    background-color: rgb(186, 220, 242);
+    background-color: var(--color-background);
     color: var(--color-dark);
     font-family: 'Urbanist', sans-serif;
 }
