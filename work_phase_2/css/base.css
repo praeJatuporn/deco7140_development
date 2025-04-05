@@ -14,6 +14,11 @@
     /* Light Grey */
 }
 
+body {
+    background-color: #3498db;
+    color: #3498db;
+}
+
 /* Font */
 body {
     font-family: 'Inter', sans-serif;
@@ -28,11 +33,18 @@ body {
     background-color: #f5f5f5;
 }
 
+
+/* สีพื้นหลังของ header */
+header {
+    background-color: #3498db;
+    color: white; /* ตัวอักษรใน header เป็นสีขาว */
+}
+
 /* Typography (Using Golden Ratio) */
 h1 {
     font-size: 4.2rem;
     /* 2.6 x 1.618 rounded */
-    color: #2c3e50;
+    color: #333;
 }
 
 h2 {
@@ -56,11 +68,50 @@ p {
 }
 
 /* line height */
-h1,
-h2,
-h3,
-h4,
-h5,
-p {
-    line-height: 1.5;
+h1 {
+    line-height: 1.5; /* เพิ่มความห่างระหว่างบรรทัดใน h1 */
+}
+
+h2 {
+    line-height: 1.5; /* เพิ่มความห่างระหว่างบรรทัดใน h2 */
+}
+
+h3 {
+    line-height: 2; /* เพิ่มความห่างระหว่างบรรทัดใน h3 */
+}
+
+h4 {
+    line-height: 2; /* เพิ่มความห่างระหว่างบรรทัดใน h4 */
+}
+
+h5 {
+    line-height: 1.5; /* เพิ่มความห่างระหว่างบรรทัดใน h5 */
+}
+
+
+
+.value-box {
+    background-color: #ffffff;
+    /* พื้นหลังสีขาวเพื่อเพิ่มคอนทราสต์ */
+    color: #000000;
+    /* ข้อความสีดำเพื่อความคอนทราสต์สูงสุดและอ่านง่าย */
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    /* เงาที่เข้มขึ้นเล็กน้อยเพื่อความคมชัด */
+    font-size: 1rem;
+    /* ขนาดฟอนต์ใหญ่ขึ้นเพื่อให้อ่านง่ายขึ้น */
+    font-weight: 300;
+    text-align: left;
+    max-width: 1000px;
+    margin: 1.5rem auto;
+    border-left: 10px solid #0056b3;
+    /* สีฟ้าลึกสำหรับคอนทราสต์สูงและการมองเห็นที่เสถียร */
+}
+
+.value-box p {
+    margin: 0;
+    font-size: 1.2rem;
+    /* ขนาดฟอนต์สำหรับย่อหน้าที่ใหญ่ขึ้น */
+    font-weight: 400;
 }

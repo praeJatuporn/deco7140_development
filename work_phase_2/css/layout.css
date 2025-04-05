@@ -7,7 +7,7 @@
     /* 80% of the viewpoint width */
     margin: 0 auto;
     /* Centers the container horizontally */
-    background-color: whitesmoke;
+    background-color:#f6f6e7;
     /* Light background for contrast */
 }
 
@@ -29,6 +29,6 @@
     /* Red */
     --text-color: #333;
     /* Dark Grey */
-    --background-color: #f5f5f5;
+    --background-color: #a1bad8;
     /* Light Grey */
 }

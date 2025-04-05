@@ -18,8 +18,8 @@
 *::before,
 *::after {
     animation: none !important;
-    transition: none !important;
-    transform: none !important;
+    transition: none;
+    transform: none;
     filter: none !important;
     appearance: none;
 }
