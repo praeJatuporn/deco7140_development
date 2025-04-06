@@ -1,21 +1,20 @@
+/**to ensure the menu functions correctly without error */
 /**
  * IMPORTS
  * Keep track of external modules being used
  * */
-import {logMessage } from "./modules/logging.js";
+import { setupMenu } from "./modules/menu.js";
 
 /**
  * CONSTANTS
  * Define values that don't change e.g. page titles, URLs, etc.
  * */
-const PAGE_NAME = "typography.js";
-
+const PAGE_NAME = "user_stories.js";
 /**
  * VARIABLES
  * Define values that will change e.g. user inputs, counters, etc.
  * */
 let message = "Page has fully loaded";
-
 /**
  * FUNCTIONS
  * Group code into functions to make it reusable
@@ -27,6 +26,6 @@ let message = "Page has fully loaded";
  * */
 
 // when the page fully loads
-window.addEventListener("load", () => {
-    logMessage(PAGE_NAME, message);
+document.addEventListener("DOMContentLoaded", () => {
+    setupMenu(PAGE_NAME, message);
 });

@@ -2,7 +2,7 @@
  * IMPORTS
  * Keep track of external modules being used
  * */
-import { logMessage } from "./modules/logging.js";
+import {logMessage } from "./modules/logging.js";
 
 /**
  * CONSTANTS
