@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="css/layout.css" />
         <link rel="stylesheet" href="css/components.css" />
 
-        <title>WP2 - Accessibility assessment</title>
+        <title>Work Phase 2</title>
     </head>
     <body>
         <!--responsive menu-->
@@ -19,13 +19,17 @@
                 ☰
             </button>
             <ul class="menu">
-                <li><a href="../index.html" aria-current="home">Home</a></li>
+                <li><a href="../index.html">Home</a></li>
                 <li><a href="client_needs_analysis.html">Client Needs</a></li>
                 <li><a href="user_stories.html">User Stories</a></li>
                 <li>
-                    <a href="accessibility_assessment.html">Accessibility</a>
+                    <a
+                        href="accessibility_assessment.html"
+                        aria-current="Accessibility"
+                        >Accessibility</a
+                    >
                 </li>
-                <li><a href="ethics_analysis.html">Ethics Analysis</a></li>
+                <li><a href="ethics_analysis.html">Ethics</a></li>
                 <li>
                     <a href="genai_mt_acknowledgement.html"
                         >GenAI Acknowledge</a
@@ -35,16 +39,349 @@
         </nav>
 
         <div class="container">
-            <h1>Accessibility assessment</h1>
+            <header>
+                <h1>Accessibility assessment</h1>
+            </header>
+
             <section>
-                <h2>Accessibility assessment</h2>
-                <p>This is the accessibility assessment for this website.</p>
+                <h2>WCAG 2.2</h2>
             </section>
-            <section>
-                <a class="button button-WP2Home" href="./index.html"
-                    >WP2 Home</a
-                >
-            </section>
+
+            <!-- flip-card diagram -->
+            <div class="flip-diagram-container">
+                <!-- Row 1 -->
+                <div class="diagram-row">
+                    <div class="flip-diagram-card">
+                        <div class="flip-diagram-inner">
+                            <div class="flip-diagram-front">
+                                <div class="diagram-box">
+                                    <h3>
+                                        Alternative Text For Non-Text Content
+                                    </h3>
+                                    <p>
+                                        A navigation bar such as HOME button,
+                                        client Needs, User Stories,
+                                        Accessibility, Ethics and GenAI
+                                        Acknowledge
+                                    </p>
+                                </div>
+                                <div class="diagram-box"></div>
+                            </div>
+                            <div class="flip-diagram-back">
+                                <div class="diagram-box">
+                                    <h3>
+                                        According to the client needs,especially
+                                        "Act as James", he is a retired and he
+                                        may not be familiar with modern
+                                        technology. The navigation with alt text
+                                        can help him to experience on the
+                                        webpage easily. He can explore the
+                                        website without relying on other people.
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-diagram-card">
+                        <div class="flip-diagram-inner">
+                            <div class="flip-diagram-front">
+                                <div class="diagram-box">
+                                    <h3>Meaningful Sequence</h3>
+                                    <p>Adjust the list of headings</p>
+                                </div>
+                                <div class="diagram-box"></div>
+                            </div>
+                            <div class="flip-diagram-back">
+                                <div class="diagram-box">
+                                    <h3>
+                                        According to the user needs, there are
+                                        many nationalities. They need the
+                                        webpage which the content is structured
+                                        in a logical sequence to follow easily
+                                        such as main heading and following by
+                                        sub-heading.
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Row 2 -->
+                <div class="diagram-row">
+                    <div class="flip-diagram-card">
+                        <div class="flip-diagram-inner">
+                            <div class="flip-diagram-front">
+                                <div class="diagram-box">
+                                    <h3>Avoid Color Only Cues</h3>
+                                    <p>
+                                        Applied the color on the webpage
+                                        associated with elderly people
+                                    </p>
+                                </div>
+                                <div class="diagram-box"></div>
+                            </div>
+                            <div class="flip-diagram-back">
+                                <div class="diagram-box">
+                                    <h3>
+                                        According to James who is elderly, He
+                                        may have age-related visual impairments.
+                                        This webpage was designed using the
+                                        light background colors which is cream.
+                                        For the text, It is applied with the
+                                        dark color which is black.For the
+                                        buttons are used by high-contrast colors
+                                        which is the backgroung is dark and the
+                                        text is the bright color. Some words are
+                                        used the highlight colors with is light
+                                        yelow.
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-diagram-card">
+                        <div class="flip-diagram-inner">
+                            <div class="flip-diagram-front">
+                                <div class="diagram-box">
+                                    <h3>Perceiveble Text Contrast</h3>
+                                    <p>
+                                        Using the regular text and high contrast
+                                        ratio
+                                    </p>
+                                </div>
+                                <div class="diagram-box"></div>
+                            </div>
+                            <div class="flip-diagram-back">
+                                <div class="diagram-box">
+                                    <h3>
+                                        According to the user needs, especially
+                                        James and the future users who need to
+                                        participate in the community and having
+                                        visual impairments, the page is used the
+                                        regular text. The contrast ratio between
+                                        black text and the background is
+                                        21:1(balck:cream).
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 3 -->
+                <div class="diagram-row">
+                    <div class="flip-diagram-card">
+                        <div class="flip-diagram-inner">
+                            <div class="flip-diagram-front">
+                                <div class="diagram-box">
+                                    <h3>Resize Text Without Loss</h3>
+                                    <p>The function hasn't been applied yet.</p>
+                                </div>
+
+                                <div class="diagram-box"></div>
+                            </div>
+                            <div class="flip-diagram-back">
+                                <div class="diagram-box">
+                                    <h3>
+                                        It will be applied in the near future
+                                        for the user needs such as a button to
+                                        adjust text size. When clicking the
+                                        increase text size's button, the font
+                                        size on the webpage will be increased.
+                                        This adjustment will help accommodate
+                                        users with visual impairments.
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 4 -->
+                <div class="diagram-row">
+                    <div class="flip-diagram-card">
+                        <div class="flip-diagram-inner">
+                            <div class="flip-diagram-front">
+                                <div class="diagram-box">
+                                    <h3>Keyboard Navigability</h3>
+                                    <p>The function hasn't been applied yet.</p>
+                                </div>
+                                <div class="diagram-box"></div>
+                            </div>
+                            <div class="flip-diagram-back">
+                                <div class="diagram-box">
+                                    <h3>
+                                        It will be applied in the near future
+                                        because according to the client needs
+                                        who is elderly with limitations in using
+                                        a mouse, may be interested in joining
+                                        the community in the future. Therefore,
+                                        this function should be applied in the
+                                        future, along with other users, such as
+                                        James, who enjoys outdoor activities. He
+                                        may prefer to use a keyboard instead of
+                                        carrying a mouse for outdoor use.
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-diagram-card">
+                        <div class="flip-diagram-inner">
+                            <div class="flip-diagram-front">
+                                <div class="diagram-box">
+                                    <h3>Focus Visible</h3>
+                                    <p>The function hasn't been applied yet.</p>
+                                </div>
+                                <div class="diagram-box"></div>
+                            </div>
+                            <div class="flip-diagram-back">
+                                <div class="diagram-box">
+                                    <h3>
+                                        It will be applied in the near future
+                                        based on the client's needs, who is
+                                        elderly, as well as other users. This
+                                        feature will make it easier for them to
+                                        see what they are focusing on the
+                                        webpage. Additionally, it can serve as
+                                        navigation to help users reach the
+                                        correct purpose on the website.
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 5 -->
+                <div class="diagram-row">
+                    <div class="flip-diagram-card">
+                        <div class="flip-diagram-inner">
+                            <div class="flip-diagram-front">
+                                <div class="diagram-box">
+                                    <h3>Reading Level</h3>
+                                    <p>
+                                        Using the indentation and Line spacing on the user stories page
+                                    </p>
+                                </div>
+                                <div class="diagram-box"></div>
+                            </div>
+                            <div class="flip-diagram-back">
+                                <div class="diagram-box">
+                                    <h3>
+                                        The content on the user's story page is
+                                        not yet well organized due to the large
+                                        amount of text. However, in this
+                                        section, text highlighting and emojis
+                                        are used to make it easier to read.
+                                        Additionally, the indentation function
+                                        is applied to the client’s answers, such
+                                        as div class="response p-x-5 tag. For
+                                        the questions, the p class="question
+                                        p-x-3" tag is used. Line spacing is also
+                                        applied to improve readability, as shown
+                                        in the CSS code. 
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-diagram-card">
+                        <div class="flip-diagram-inner">
+                            <div class="flip-diagram-front">
+                                <div class="diagram-box">
+                                    <h3>Consistent Navigation</h3>
+                                    <p>Using NAV BAR on every page</p>
+                                </div>
+                                <div class="diagram-box"></div>
+                            </div>
+                            <div class="flip-diagram-back">
+                                <div class="diagram-box">
+                                <h3>Using the same nav bar style on every page and also menu collapses on mobile due to the fact that the clients need the website which is user-friendly</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 6 -->
+                <div class="diagram-row">
+                    <div class="flip-diagram-card">
+                        <div class="flip-diagram-inner">
+                            <div class="flip-diagram-front">
+                                <div class="diagram-box">
+                                    <h3>
+                                        Consistent Identification (Layout & UI
+                                        Behavior)
+                                    </h3>
+                                    <p>Using Navigation menu (NAV BAR), Same fonts, same background color, using flip cards</p>
+                                </div>
+                                <div class="diagram-box"></div>
+                            </div>
+                            <div class="flip-diagram-back">
+                                <div class="diagram-box">
+                                    <h3>To use consistent navigation menu, the same font style, background color across the website. Flip cards help users understand what changes will occur when they hover the mouse over the cards.
+                                The design is to support older adults need, simple navigation and not too many complex features. The page looks consistency such as UI elements like buttons and links across the website to make browsing seamless.</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-diagram-card">
+                        <div class="flip-diagram-inner">
+                            <div class="flip-diagram-front">
+                                <div class="diagram-box">
+                                    <h3>Error Identification and Suggestion</h3>
+                                    <p>The function hasn't been applied yet.</p>
+                                </div>
+
+                                <div class="diagram-box"></div>
+                            </div>
+                            <div class="flip-diagram-back">
+                                <div class="diagram-box">
+                                    <h3>According to the client's needs, this function will be applied in the future. For example, when users book events and they fill the wrong format of date, a prompt will pop up to notify them</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 7 -->
+                <div class="diagram-row">
+                    <div class="flip-diagram-card">
+                        <div class="flip-diagram-inner">
+                            <div class="flip-diagram-front">
+                                <div class="diagram-box">
+                                    <h3>Labels and Instructions</h3>
+                                    <p>The function hasn't been applied yet.</p>
+                                </div>
+
+                                <div class="diagram-box"></div>
+                            </div>
+                            <div class="flip-diagram-back">
+                                <div class="diagram-box">
+                                    <h3>According to the client's needs, this function will be applied in the future. For example, The email input form will provide guidance on the correct email format to help users understand, especially based on the specific needs of users who may have language-related requirements and might not fully understand what the system expects. This will also help elderly users who may be less familiar with technology.</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-diagram-card">
+                        <div class="flip-diagram-inner">
+                            <div class="flip-diagram-front">
+                                <div class="diagram-box">
+                                    <h3>Error Prevention and Recovery</h3>
+                                    <p>The function hasn't been applied yet.</p>
+                                </div>
+                                <div class="diagram-box"></div>
+                            </div>
+                            <div class="flip-diagram-back">
+                                <div class="diagram-box">
+                                    <h3>According to the client's needs, this function will be applied in the future. For example, For event booking, users will not need to manually enter the date to prevent errors in the date format. The webpage will provide a calendar box for users to click and select the date. Additionally, there will be language-specific guidance, such as date formats in Thai, Chinese, and abbreviated English.</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <!-- END -->
         </div>
 
         <!-- Linking External JavaScript -->

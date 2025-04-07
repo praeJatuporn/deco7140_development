@@ -1,105 +1,117 @@
-/* INTERACTIVE HIGHLIGHTING */
-/* Base Highlight Style */
-.interactive-highlight {
+/* === INTERACTIVE HIGHLIGHTING === */
+.interactive-highlight,
+.interactive-highlight-stories {
     position: relative;
-    /* Allows for positioning of extra elements (e.g., tooltip numbers) */
     background-color: rgba(255, 215, 0, 0.3);
-    /* Light yellow highlight with 30% transparency */
     cursor: pointer;
-    /* Changes cursor to indicate interactivity */
     padding: 2px 5px;
-    /* Adds small space inside the highlight for better readability */
     border-radius: 5px;
-    /* Rounds the corners slightly for a softer look */
     transition: background 0.3s ease;
-    /* Smooth transition effect when background changes */
 }
 
-/* Show Number on Hover (Desktop) (IA1) */
+/* Tooltip trigger (desktop) */
 @media (hover: hover) {
-    .interactive-highlight:hover::after {
+
+    .interactive-highlight:hover::after,
+    .interactive-highlight-stories:hover::after {
         opacity: 1;
     }
 }
 
-/* Show Number on Tap (Mobile) (IA1) */
+/* Tooltip trigger (mobile) */
 .interactive-highlight:focus::after,
-.interactive-highlight:active::after {
+.interactive-highlight:active::after,
+.interactive-highlight-stories:focus::after,
+.interactive-highlight-stories:active::after {
     opacity: 1;
 }
 
-/* Tooltip Styling for Highlighted Text (IA1)*/
-.interactive-highlight::after {
-    content: attr(data-card);
-    /* See the explanation */
+/* === Tooltip Styles === */
+.interactive-highlight::after,
+.interactive-highlight-stories::after {
     position: absolute;
-    /* Positions the tooltip relative to the highlighted text */
     top: -5px;
-    /* Moves the tooltip slightly above the highlighted text */
     right: -15px;
-    /* Moves the tooltip slightly to the right of the highlighted text */
     background: var(--accent-color);
     color: white;
     font-size: 0.8rem;
     font-weight: bold;
-    width: 120px;
-    /* Sets a fixed width for the tooltip */
-    height: 30px;
-    /* Sets a fixed height, making the tooltip a perfect circle */
     display: flex;
-    /* Uses Flexbox to center the text inside the circle */
     align-items: center;
-    /* Vertically centers the text inside the tooltip */
     justify-content: center;
-    /* Horizontally centers the text inside the tooltip */
-    border-radius: 10%;
-    /* Creates rounded corners */
     opacity: 0;
-    /* Initially hides the tooltip */
     transition: opacity 0.3s ease;
-    /* Smoothly fades in the tooltip by changing the opacity */
 }
 
-/* Flip Cards - Client Needs analysis*/
-/* Mobile-First Grid (Default: 1 Column) */
+.interactive-highlight::after {
+    content: attr(data-card);
+    width: 120px;
+    height: 30px;
+    border-radius: 10%;
+}
+
+.interactive-highlight-stories::after {
+    content: attr(data-userstory);
+    width: 300px;
+    height: 100px;
+    padding: 0 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* === VALUE BOX === */
+.value-box,
+.user-story-box {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    font-size: 1rem;
+    font-weight: 300;
+    text-align: left;
+    max-width: 1000px;
+    margin: 1.5rem auto;
+    border-left: 10px solid #0056b3;
+}
+
+.value-box p,
+.user-story-box p {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+/* === FLIP CARD GRID === */
 .flip-card-container {
     display: grid;
     grid-template-columns: 1fr;
-    /* Mobile: Single column */
     gap: 20px;
     padding: 20px;
 }
 
-/* 3 columns on larger screens */
 @media (min-width: 768px) {
     .flip-card-container {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
-/* Flip Card Base Styles */
 .flip-card {
     width: 40%;
     height: 145px;
     perspective: 1000px;
-    /* Adds depth to make the flip look 3D */
     cursor: pointer;
-    /* Adds indication of interactivity */
     outline: none;
-    /* Removes default focus outline */
 }
 
-/* Flip Card Inner - the rotating part of the card */
 .flip-card-inner {
     width: 100%;
     height: 100%;
     position: relative;
     transform-style: preserve-3d;
-    /* creates a 3D space */
     transition: transform 0.5s ease-in-out;
 }
 
-/* Front & Back Common Styles */
 .flip-card-front,
 .flip-card-back {
     position: absolute;
@@ -107,7 +119,6 @@
     height: 100%;
     backface-visibility: hidden;
     display: flex;
-    /* we are using flex inside our cards */
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -118,42 +129,29 @@
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-/* set the colour for the front */
 .flip-card-front {
-    background: #A8D5BA;
+    background: #a8d5ba;
     color: white;
 }
 
-/* set the colour for the back */
 .flip-card-back {
     background: #339bf0;
     color: white;
     transform: rotateY(180deg);
 }
 
-/* Flip Card Inner */
-.flip-card-inner {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    transform-style: preserve-3d;
-    transition: transform 0.5s ease-in-out;
-}
-
-/* Flip Animation (Desktop Hover) */
 @media (hover: hover) {
     .flip-card:hover .flip-card-inner {
         transform: rotateY(180deg);
     }
 }
 
-/* Mobile-Friendly Flip (Focus & Tap) */
 .flip-card:focus .flip-card-inner,
 .flip-card:active .flip-card-inner {
     transform: rotateY(180deg);
 }
 
-/* NAVBAR MENU  */
+/* === NAVBAR === */
 .navbar {
     background-color: var(--primary-color);
     padding: 10px;
@@ -163,11 +161,9 @@
     position: relative;
 }
 
-/* MENU (Mobile First) Hamburger menu */
 .menu {
     list-style: none;
     display: none;
-    /* Hidden by default */
     flex-direction: column;
     background-color: var(--primary-color);
     width: 100%;
@@ -188,7 +184,6 @@
     padding: 10px;
 }
 
-/* MENU TOGGLE BUTTON */
 .menu-toggle {
     background: none;
     border: none;
@@ -197,23 +192,19 @@
     cursor: pointer;
 }
 
-/* SHOW MENU WHEN TOGGLED */
 .menu.show {
     display: flex;
 }
 
-/* DESKTOP VIEW */
 @media (min-width: 768px) {
     .menu {
         display: flex;
-        /* Visible by default on larger screens */
         position: static;
         flex-direction: row;
     }
 
     .menu-toggle {
         display: none;
-        /* Hide toggle button on larger screens */
     }
 
     .menu li {
@@ -221,7 +212,7 @@
     }
 }
 
-/* button styles */
+/* === BUTTONS === */
 .button {
     padding: 10px 20px;
     border-radius: 5px;
@@ -231,11 +222,257 @@
     text-align: center;
     display: inline-block;
     text-decoration: none;
-    /* new */
 }
 
-/* button color variants */
 .button-WP2Home {
     background-color: #000000;
-    color: rgb(252, 251, 251);
+    color: #fcfbfb;
 }
+
+/* === SPACING HELPERS === */
+.p-x-5 {
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+.p-x-3 {
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.user-name {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.initial-prompt {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.question {
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.response {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    font-style: italic;
+    border-left: 2px solid var(--secondary-color);
+    background-color: color-mix(in srgb, var(--secondary-color) 10%, transparent);
+}
+
+.response p::before {
+    content: "💬";
+    font-size: 1.5em;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/* === HEADING === */
+h5 {
+    background: linear-gradient(135deg, #63bce5, #e6f7ff);
+    color: #01080b;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-align: left;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    /* Stack cards vertically on mobile */
+    align-items: center;
+    /* Center cards */
+    gap: 1rem;
+    /* Add space between cards */
+    padding: 1rem;
+}
+
+.simple-card {
+    background-color: rgb(186, 215, 204);
+    border: 1px solid #a5f7ad;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(195, 152, 186, 0.1);
+    padding: 1.5rem;
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .card-container {
+        flex-direction: row;
+        /* Align cards in a row */
+        flex-wrap: wrap;
+        /* Allow wrapping if space is limited */
+        justify-content: center;
+        /* Center cards in the container */
+    }
+
+    .simple-card {
+        width: auto;
+        /* Allow cards to size dynamically */
+        flex: 1 1 280px;
+        /* Flexible sizing for desktop */
+    }
+}
+
+.question {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* === NEW FLIP CARD (เพิ่มใหม่) === */
+.flip-card-new {
+    width: 70%;
+    /* กำหนดความกว้างของ Flip Card ใหม่ */
+    height: 500px;
+    /* เพิ่มความสูงของ Flip Card */
+    perspective: 1000px;
+    cursor: pointer;
+    outline: none;
+    margin: 0 auto;
+    /* จัดให้อยู่กลาง */
+    transition: transform 0.5s ease-in-out;
+}
+
+.flip-card-inner-new {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease-in-out;
+}
+
+.flip-card-front-new,
+.flip-card-back-new {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 1.5rem;
+    /* ปรับขนาดฟอนต์ */
+    box-shadow: 3px 3px 10px rgba(201, 128, 128, 0.3);
+}
+
+.flip-card-front-new {
+    background: #9ad4ef;
+    color: white;
+}
+
+.flip-card-back-new {
+    background: #a3fab7;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+/* === NEW FLIP CARD INTERACTION (Hover & Focus) === */
+@media (hover: hover) {
+    .flip-card-new:hover .flip-card-inner-new {
+        transform: rotateY(180deg);
+    }
+}
+
+.flip-card-new:focus .flip-card-inner-new,
+.flip-card-new:active .flip-card-inner-new {
+    transform: rotateY(180deg);
+}
+
+/* === VALUE BOX New === */
+.value-box-new,
+.user-story-box-new {
+    background-color: #d2ecf9;
+    color: #000000;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    font-size: 1rem;
+    font-weight: 300;
+    text-align: left;
+    width: 100%;
+    max-width: 1200px;
+    margin: 1.5rem auto;
+    border-right: 50px solid #3184c7;
+}
+
+.value-box p,
+.user-story-box-new p {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+/* === Flip card Diagram (Updated) === */
+.flip-diagram-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15rem;
+    margin: 2rem 0;
+}
+
+.diagram-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.flip-diagram-card {
+    perspective: 1000px;
+    width: 45%;
+    min-width: 300px;
+    height: 250px; /* ✅ กำหนดความสูงชัดเจน */
+}
+
+.flip-diagram-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease-in-out;
+}
+
+.flip-diagram-card:hover .flip-diagram-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-diagram-front,
+.flip-diagram-back {
+    position: absolute;
+    width: 100%;
+    height: 160%;
+    backface-visibility: hidden;
+    background-color: #6ab2c1;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box; /* ✅ ให้ padding ไม่ดันเกินขอบกล่อง */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.flip-diagram-back {
+    transform: rotateY(180deg);
+    background-color: #a3c4b1;
+}
+
+.diagram-box {
+    margin-bottom: 1rem;
+}
+
+.diagram-box h3 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
