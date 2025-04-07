@@ -37,7 +37,7 @@ body {
 /* สีพื้นหลังของ header */
 header {
     background-color: #3498db;
-    color: white; 
+    color: white;
 }
 
 /* Typography (Using Golden Ratio) */
@@ -65,31 +65,38 @@ p {
     font-size: 1rem;
     /* 2.6 ÷ 1.618 rounded */
     color: #333;
+    line-height: 1.5;
 }
 
 /* line height */
 h1 {
-    line-height: 1.5; 
+    line-height: 1.5;
 }
 
 h2 {
-    line-height: 1.5; 
+    line-height: 1.5;
 }
 
 h3 {
-    line-height: 2; 
+    line-height: 2;
 }
 
 h4 {
-    line-height: 2; 
+    line-height: 2;
 }
 
+
 h5 {
-    line-height: 2; 
+    background: linear-gradient(135deg, #63bce5, #e6f7ff);
+    color: #01080b;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-align: left;
+    line-height: 2;
     font-size: 1.5rem;
 }
 
+li {
+    line-height: 2;
 
-
-
-
+}
