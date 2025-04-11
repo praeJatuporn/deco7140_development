@@ -65,14 +65,14 @@
     background-color: #ffffff;
     color: #000000;
     padding: 1.5rem;
-    border-radius: 10px;
+    border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
     font-size: 1rem;
     font-weight: 300;
     text-align: left;
     max-width: 1000px;
     margin: 1.5rem auto;
-    border-left: 10px solid #0056b3;
+    border: 1px solid #0056b3;
 }
 
 .value-box p,
@@ -82,14 +82,15 @@
     font-weight: 400;
 }
 
-/* FLIP CARD GRID */
+/* Flip Cards - Client Needs analysis */
 .flip-card-container {
-    display: flex;
-    flex-wrap: wrap; /* Allow cards to wrap to the next line */
-    justify-content: center; /* Center the cards horizontally */
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 20px;
     padding: 20px;
 }
+
+
 
 .flip-card {
     width: 30%; /* Adjust width to fit more cards per row */
