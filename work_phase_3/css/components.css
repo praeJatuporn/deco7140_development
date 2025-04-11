@@ -25,6 +25,11 @@
     padding: 2rem;
 }
 
+.page-title {
+    padding-top: 5rem;
+    /* ช่วยดันเนื้อหาลงมาให้พ้นจากเมนู */
+}
+
 @media (max-width: 768px) {
     .page-title .content {
         max-width: 90%;
@@ -79,5 +84,79 @@
 @media (max-width: 768px) {
     .page-title .content h3 {
         font-size: 1.4rem;
+    }
+}
+
+/* MENUS */
+/* Base styles */
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#nav-mobile {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    background-color: var(--text-color);
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#nav-mobile ul li a {
+    display: block;
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+#nav-desktop {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    background-color: var(--text-color);
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    display: none;
+    height: 60px;
+    z-index: 9999; /* above all element */
+
+}
+
+#nav-desktop ul li a {
+    display: block;
+    padding: 1rem 0;
+    font-size: 1.25rem;
+    text-decoration: none;
+    color: white; /*font color*/
+    transition: all 0.3s ease;
+
+}
+
+#nav-desktop ul li a:hover {
+    color: #ffffff; 
+    font-weight: bold;
+    background-color: #007BFF; 
+    transform: scale(1.05); 
+    transition: all 0.3s ease; 
+}
+
+
+/* Remember - media query should be below here */
+
+/* Responsive control */
+/* Media query should be below here */
+
+/* MENUS */
+/* Responsive control */
+@media screen and (min-width: 768px) {
+    #nav-desktop {
+        display: block;
+    }
+
+    #nav-mobile {
+        display: none;
     }
 }
