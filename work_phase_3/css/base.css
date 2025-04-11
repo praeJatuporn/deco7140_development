@@ -1,0 +1,50 @@
+/* Font importing */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --primary-color: #e84393;
+    --secondary-color: #3498db;
+    --accent-color: #00cec9;
+    /*สีเน้น*/
+    --text-color: #333;
+    --background-color: #f5f5f5;
+}
+
+/* Font Style */
+body {
+    font-family: "Poppins", sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+/* Typography (Using Golden Ratio) */
+h1 {
+    position: relative;
+    font-size: 3rem;
+    color: var(--text-color);
+    font-weight: bolder;
+    padding: 2rem 9%;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0.5rem 1rem rgba(0, 0, 0, .1);
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    align-items: center;
+}
+
+้h3 {
+    color: var(--primary-color);
+}
+
+span {
+    color:var(--secondary-color)
+}
+
+
