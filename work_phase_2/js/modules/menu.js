@@ -12,26 +12,22 @@ export function setupMenu(pageName, message) {
     const menuToggle = document.querySelector(".menu-toggle");
     const menu = document.querySelector(".menu");
 
-    if (!menuToggle || !menu) {
+    if (menuToggle && menu) {
+        // Toggle menu visibility
+        menuToggle.addEventListener("click", () => {
+            menu.classList.toggle("show");
+        });
+
+        // Optional: Close menu when clicking outside
+        document.addEventListener("click", (event) => {
+            if (
+                !menu.contains(event.target) &&
+                !menuToggle.contains(event.target)
+            ) {
+                menu.classList.remove("show");
+            }
+        });
+    } else {
         console.error("[Menu] .menu-toggle or .menu not found in DOM");
-        return;
     }
-
-    // Prevent clicks inside the menu from closing it
-    menu.addEventListener("click", (event) => {
-        event.stopPropagation();
-    });
-
-    // Toggle menu visibility when hamburger button is clicked
-    menuToggle.addEventListener("click", (event) => {
-        event.stopPropagation();
-        menu.classList.toggle("show");
-    });
-
-    // Close menu when clicking outside and menu is open
-    document.addEventListener("click", () => {
-        if (menu.classList.contains("show")) {
-            menu.classList.remove("show");
-        }
-    });
 }
