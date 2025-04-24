@@ -121,7 +121,8 @@ nav ul {
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
     display: none;
     height: 60px;
-    z-index: 9999; /* above all element */
+    z-index: 9999;
+    /* above all element */
 
 }
 
@@ -130,17 +131,18 @@ nav ul {
     padding: 1rem 0;
     font-size: 1.25rem;
     text-decoration: none;
-    color: white; /*font color*/
+    color: white;
+    /*font color*/
     transition: all 0.3s ease;
 
 }
 
 #nav-desktop ul li a:hover {
-    color: #ffffff; 
+    color: #ffffff;
     font-weight: bold;
-    background-color: #007BFF; 
-    transform: scale(1.05); 
-    transition: all 0.3s ease; 
+    background-color: #007BFF;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
 }
 
 
