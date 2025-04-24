@@ -11,7 +11,6 @@
 
 /* Tooltip trigger (desktop) */
 @media (hover: hover) {
-
     .interactive-highlight:hover::after,
     .interactive-highlight-stories:hover::after {
         opacity: 1;
@@ -145,7 +144,7 @@
     transform: rotateY(180deg);
 }
 
-/*  NAVBAR  */
+/* === NAVBAR === */
 .navbar {
     background-color: var(--primary-color);
     padding: 10px;
@@ -270,5 +269,5 @@
     margin-right: 10px;
 }
 
-/* (Remaining styles unchanged...) */
+/* Remaining styles unchanged */
 /* ... */
