@@ -22,14 +22,16 @@
     </head>
 
     <body>
-        <!--Start page structure-->
+        <!--Set up Page mobile & Desktop-->
         <nav id="nav-mobile" aria-label="Main Navigation">
             <ul>
                 <li>
                     <a href="index.html"><span class="icon">🏠</span></a>
                 </li>
                 <li>
-                    <a href="site_map.html"><span class="icon">🗂️</span></a>
+                    <a href="site_map.html" aria-current="page"
+                        ><span class="icon">🗂️</span></a
+                    >
                 </li>
                 <li>
                     <a href="style_guide.html"><span class="icon">🎨</span></a>
@@ -50,7 +52,9 @@
         <nav id="nav-desktop" aria-label="Main Navigation">
             <ul>
                 <li><a href="index.html">WP3 Home</a></li>
-                <li><a href="site_map.html">Site Map</a></li>
+                <li>
+                    <a href="site_map.html" aria-current="page">Site Map</a>
+                </li>
                 <li><a href="style_guide.html">Style Guide</a></li>
                 <li><a href="ethical_response.html">Ethics Response</a></li>
                 <li><a href="genai_mt_acknowledgement.html">Gen AI</a></li>
@@ -60,7 +64,20 @@
 
         <main>
             <div class="container">
-                <h1 class="page-title">Site Map<span>.</span>
+                <h1 class="page-title">Site Map<span>.</span></h1>
+                <div class="content_sitemap">
+                    <div class="h2_sitemap">
+                        <h2>
+                            This is the website created by the Card Sort
+                            exercise
+                        </h2>
+                    </div>
+                    <img
+                        src="work_space_3/assets/sitemap.jpg"
+                        alt="Card Sort exercise"
+                        class="responsive-img"
+                    />
+                </div>
             </div>
         </main>
         <!--END PAGE STRUCTURE-->

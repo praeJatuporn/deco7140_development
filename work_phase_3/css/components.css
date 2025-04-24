@@ -10,6 +10,19 @@
     gap: 2rem;
 }
 
+.content_sitemap {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    min-height: auto; 
+    background-color: rgb(4, 30, 21);
+    padding: 1rem;  
+    gap: 2rem;  
+    margin-top: 2rem;
+}
+
+
 @media (max-width: 768px) {
     .content {
         flex-direction: column;
@@ -23,6 +36,7 @@
     margin: 0 auto;
     flex-direction: column;
     padding: 2rem;
+
 }
 
 .page-title {
@@ -161,4 +175,20 @@ nav ul {
     #nav-mobile {
         display: none;
     }
+}
+
+.responsive-img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.h2_sitemap {
+    font-size: 1rem;
+    flex: 1 1 45%;
+    max-width: 100%;
+    font-weight: bold;
+    background-color: #ede69d;
+    border: 3px;
+    padding: 2rem; 
 }
