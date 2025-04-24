@@ -28,4 +28,4 @@ let message = "Page has fully loaded";
 // when the page fully loads
 document.addEventListener("DOMContentLoaded", () => {
     setupMenu(PAGE_NAME, message);
-});
+}); 

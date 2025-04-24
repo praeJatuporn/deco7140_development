@@ -1,19 +1,8 @@
-// js/modules/menu.js
-
-/**
- * Sets up the responsive navigation menu toggle.
- *
- * @param {string} pageName — the name of the current page (for logging)
- * @param {string} message — a message to log when the menu is initialized
- */
-export function setupMenu(pageName, message) {
-    console.log(`[Menu] ${pageName}: ${message}`);
-
+function setupMenu() {
     const menuToggle = document.querySelector(".menu-toggle");
     const menu = document.querySelector(".menu");
 
     if (menuToggle && menu) {
-        // Toggle menu visibility
         menuToggle.addEventListener("click", () => {
             menu.classList.toggle("show");
         });
@@ -27,7 +16,7 @@ export function setupMenu(pageName, message) {
                 menu.classList.remove("show");
             }
         });
-    } else {
-        console.error("[Menu] .menu-toggle or .menu not found in DOM");
     }
 }
+
+export { setupMenu }; 
