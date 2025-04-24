@@ -31,4 +31,3 @@ export function setupMenu(pageName, message) {
         console.error("[Menu] ไม่พบ .menu-toggle หรือ .menu ใน DOM");
     }
 }
-
