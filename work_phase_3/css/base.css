@@ -5,7 +5,6 @@
     --primary-color: #e84393;
     --secondary-color: #3498db;
     --accent-color: #2c3e50;
-    /*สีเน้น*/
     --text-color: #333;
     --background-color: #f5f5f5;
 }
@@ -34,16 +33,30 @@ h1 {
 }
 
 h2 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: var(--text-color);
     align-items: center;
+    font-weight: bolder;
 }
 
 
-้h3 {
-    color: var(--primary-color);
+h3 {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    align-items: center;
+    font-weight: bolder;
+}
+
+้h4 {
+    font-size: 1rem;
+    color: var(--text-color);
 }
 
 span {
     color: var(--secondary-color)
+}
+
+p {
+    font-size: 1.5rem;
+    color: var(--text-color);
 }

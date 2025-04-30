@@ -19,4 +19,4 @@ function setupMenu() {
     }
 }
 
-export { setupMenu }; 
+export { setupMenu };

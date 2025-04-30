@@ -9,6 +9,8 @@
         <link rel="stylesheet" href="css/base.css" />
         <link rel="stylesheet" href="css/layout.css" />
         <link rel="stylesheet" href="css/components.css" />
+        <link rel="stylesheet" href="css/page_css/site_map.css" />
+        <link rel="stylesheet" href="css/component_skeletons/accordion.css" />
 
         <!--Favicon>-->
         <link
@@ -77,9 +79,167 @@
                         alt="Card Sort exercise"
                         class="responsive-img"
                     />
+                    <p>
+                        In this exercise, I created a sitemap based on the card
+                        sort results. The goal is to create a user-friendly
+                        navigation structure.
+                    </p>
+                    <p>
+                        This accordion shows the website structure. Expand each
+                        section to view pages and sub-pages, with notes on user
+                        or client needs.
+                    </p>
                 </div>
+
+                <!-- Accordion container-->
+                <section class="accordion m-y-5">
+                    <!-- Accordion Item 1-->
+                    <div class="accordion-item">
+                        <button class="accordion-header">▷ About</button>
+                        <div class="accordion-content">
+                            <p class="m-y-3">
+                                The About helps users understand the mission of
+                                the website and how it connects people with
+                                shared interests. It helps users decide if the
+                                platform meets their needs. The design is
+                                simple, making it easy to scan and understand
+                                the purpose. Users can connect with groups based
+                                on interests including crochet, knitting and
+                                embroidery.
+                            </p>
+                            <!-- Nested Accordion for Sub-pages -->
+                            <div class="accordion nested">
+                                <div class="accordion-item">
+                                    <button class="accordion-header">
+                                        ▹▷ About us
+                                    </button>
+                                    <div class="accordion-content">
+                                        <p class="m-y-3">
+                                            A section provides a clear
+                                            explanation of the website's purpose
+                                            and values, helping users understand
+                                            how this platform can meet their
+                                            needs. For new users, this section
+                                            allows them to connect with others
+                                            who share their love for handcrafts
+                                            such as knitting, embroidery, and
+                                            crochet. It makes it easier for them
+                                            to read and decide if they want to
+                                            be part of the community. The design
+                                            is straightforward, with clear
+                                            headings and easy to scan content.
+                                            It also includes high contrast text
+                                            and a clear layout to support users
+                                            with visual impairments.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <button class="accordion-header">
+                                        ▹▷ FAQ
+                                    </button>
+                                    <div class="accordion-content">
+                                        <p class="m-y-3">
+                                            The FAQ section addresses the common
+                                            questions and concerns users may
+                                            have, providing clear and concise
+                                            answers to help them understand the
+                                            website’s features, activities, and
+                                            how to connect with others. To
+                                            support users, it offers easy to
+                                            scan text with clearly distinguished
+                                            headings for each question, ensuring
+                                            they can quickly find the
+                                            information they need to use the
+                                            site effectively and join relevant
+                                            activities.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <button class="accordion-header">
+                                        ▹▷ Contact Us
+                                    </button>
+                                    <div class="accordion-content">
+                                        <p class="m-y-3">
+                                            The simple contact template for user
+                                            who may have questions, feedback, or
+                                            need support.This is designed to be
+                                            fully accessible with a clear
+                                            instruction and labels for each
+                                            field in the contact form.The call
+                                            to action button is prominently
+                                            displayed to guide users through the
+                                            process of submitting their message.
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- Nested item (sub-page) HTML will go here-->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Accordion Item 2-->
+                    <div class="accordion-item">
+                        <button class="accordion-header">▷ Profile</button>
+                        <div class="accordion-content">
+                            <p class="m-y-3">
+                                The central hub for each user to manage their
+                                personal information, interests, and activity
+                                within the community. This will be linked to the
+                                group profile. Supports the client goal of a
+                                sense of belonging. It provides a clear layout
+                                with easy-to-use forms for updating personal
+                                details, interests, and activities.
+                            </p>
+                            <!-- Nested Accordion for Sub-pages -->
+                            <div class="accordion nested">
+                                <div class="accordion-item">
+                                    <button class="accordion-header">
+                                        ▹▷ Personal Details
+                                    </button>
+                                    <div class="accordion-content">
+                                        <p class="m-y-3">
+                                            This allows users to manage and
+                                            update their personal information
+                                            such as name, contact details, and
+                                            preferences. Users can connect with
+                                            like minded individuals by creating
+                                            the specific group. The design is
+                                            user-friendly layout with the simple
+                                            input and edit information including
+                                            the clear form fields with labeled.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <button class="accordion-header">
+                                        ▹▷ Showcase my Inspiration
+                                    </button>
+                                    <div class="accordion-content">
+                                        <p class="m-y-3">
+                                            A showcase of inspiring handcrafts
+                                            through the posting of photos or
+                                            videos. It supports users' unique
+                                            activities and their work while
+                                            fostering meaningful connections
+                                            with others through interactions,
+                                            such as liking posts with the
+                                            button.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
         </main>
         <!--END PAGE STRUCTURE-->
+        <!-- Linking External JavaScript -->
+        <script type="module" src="js/site_map.js"></script>
+        <script type="module" src="js/modules/accordion.js"></script>
     </body>
 </html>

@@ -1,3 +1,6 @@
+/* accordion.css importing */
+@import '../component_skeletons/accordion.css';
+
 .content {
     display: flex;
     justify-content: space-between;
@@ -5,7 +8,6 @@
     flex-wrap: wrap;
     min-height: 50vh;
     background-image: url('../work_space_3/assets/main.jpg');
-    background-position: bottom;
     padding: 4rem;
     gap: 2rem;
 }
@@ -16,7 +18,7 @@
     align-items: flex-start;
     flex-wrap: wrap;
     min-height: auto; 
-    background-color: rgb(4, 30, 21);
+    background-color: #f5dd73;
     padding: 1rem;  
     gap: 2rem;  
     margin-top: 2rem;
@@ -41,7 +43,7 @@
 
 .page-title {
     padding-top: 5rem;
-    /* ช่วยดันเนื้อหาลงมาให้พ้นจากเมนู */
+    
 }
 
 @media (max-width: 768px) {
@@ -51,22 +53,15 @@
     }
 }
 
-.left,
-.right {
-    flex: 1 1 45%;
-    max-width: 100%;
-}
 
 @media (max-width: 768px) {
 
-    .left,
-    .right {
+    .left{
         flex: 1 1 100%;
     }
 }
 
-.left h2,
-.right p {
+.left h2{
     font-size: 1.2rem;
     font-weight: bold;
     line-height: 1.6;
@@ -75,8 +70,7 @@
 
 @media (max-width: 768px) {
 
-    .left h2,
-    .right p {
+    .left h2{
         font-size: 1rem;
     }
 }
@@ -192,4 +186,8 @@ nav ul {
     background-color: #ede69d;
     border: 3px;
     padding: 2rem; 
+}
+
+.left p::before {
+    content: "🧶";
 }
