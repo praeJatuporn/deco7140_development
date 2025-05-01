@@ -53,7 +53,7 @@
 .interactive-highlight-stories::after {
     content: attr(data-userstory);
     width: 300px;
-    height: 100px;
+    height: 120px;
     padding: 0 10px;
     border-radius: 5px;
     font-size: 1rem;
