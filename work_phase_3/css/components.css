@@ -1,6 +1,23 @@
 /* accordion.css importing */
 @import '../component_skeletons/accordion.css';
 
+/* Tooltip trigger (desktop) */
+@media (hover: hover) {
+
+    .card,
+    .card-container {
+        opacity: 1;
+    }
+}
+
+/* Tooltip trigger (mobile) */
+.interactive-highlight:focus::after,
+.interactive-highlight:active::after,
+.interactive-highlight-stories:focus::after,
+.interactive-highlight-stories:active::after {
+    opacity: 1;
+}
+
 .content {
     display: flex;
     justify-content: space-between;
@@ -17,10 +34,10 @@
     justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
-    min-height: auto; 
+    min-height: auto;
     background-color: #eae2ba;
-    padding: 1rem;  
-    gap: 2rem;  
+    padding: 1rem;
+    gap: 2rem;
     margin-top: 2rem;
 }
 
@@ -43,7 +60,7 @@
 
 .page-title {
     padding-top: 5rem;
-    
+
 }
 
 @media (max-width: 768px) {
@@ -56,12 +73,12 @@
 
 @media (max-width: 768px) {
 
-    .left{
+    .left {
         flex: 1 1 100%;
     }
 }
 
-.left h2{
+.left h2 {
     font-size: 1.2rem;
     font-weight: bold;
     line-height: 1.6;
@@ -70,7 +87,7 @@
 
 @media (max-width: 768px) {
 
-    .left h2{
+    .left h2 {
         font-size: 1rem;
     }
 }
@@ -172,7 +189,7 @@ nav ul {
 }
 
 .responsive-img {
-    
+
     display: block;
     max-width: 100%;
     height: auto;
@@ -185,9 +202,49 @@ nav ul {
     font-weight: bold;
     background-color: #ede69d;
     border: 3px;
-    padding: 2rem; 
+    padding: 2rem;
 }
 
 .left p::before {
     content: "🧶";
+}
+
+/*Card container*/
+.card-container {
+    display: flex;
+    flex-direction: column;
+    /* Stack cards vertically on mobile */
+    align-items: center;
+    /* Center cards */
+    gap: 1rem;
+    /* Add space between cards */
+    padding: 1rem;
+}
+
+@media (min-width: 768px) {
+    .card-container {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+/* Card container style*/
+.card {
+    width: 100%;
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.card .card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.button {
+    padding: 20px;
+    border-color: black;
+    cursor: pointer;
+    position: left;
+
 }

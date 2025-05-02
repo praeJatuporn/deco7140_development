@@ -9,6 +9,8 @@
         <link rel="stylesheet" href="css/base.css" />
         <link rel="stylesheet" href="css/layout.css" />
         <link rel="stylesheet" href="css/components.css" />
+        <link rel="stylesheet" href="css/page_css/style_guide.css" />
+        <link rel="stylesheet" href="css/component_skeletons/card.css" />
 
         <!--Favicon>-->
         <link
@@ -25,29 +27,128 @@
         <!--Start page structure-->
         <nav id="nav-mobile" aria-label="Main Navigation">
             <ul>
-                <li><a href="index.html"><span class="icon">🏠</span></a></li>
-                <li><a href="site_map.html"><span class="icon">🗂️</span></a></li>
-                <li><a href="style_guide.html"><span class="icon">🎨</span></a></li>
-                <li><a href="ethical_response.html"><span class="icon">⚖️</span></a></li>
-                <li><a href="genai_mt_acknowledgement.html"><span class="icon">🤖</span></a></li></ul>
-                                                        
+                <li>
+                    <a href="index.html"><span class="icon">🏠</span></a>
+                </li>
+                <li>
+                    <a href="site_map.html"><span class="icon">🗂️</span></a>
+                </li>
+                <li>
+                    <a href="style_guide.html" aria-current="page"
+                        ><span class="icon">🎨</span></a
+                    >
+                </li>
+                <li>
+                    <a href="ethical_response.html"
+                        ><span class="icon">⚖️</span></a
+                    >
+                </li>
+                <li>
+                    <a href="genai_mt_acknowledgement.html"
+                        ><span class="icon">🤖</span></a
+                    >
+                </li>
+            </ul>
         </nav>
 
         <nav id="nav-desktop" aria-label="Main Navigation">
             <ul>
                 <li><a href="index.html">WP3 Home</a></li>
                 <li><a href="site_map.html">Site Map</a></li>
-                <li><a href="style_guide.html">Style Guide</a></li>
+                <li>
+                    <a href="style_guide.html" aria-current="page"
+                        >Style Guide</a
+                    >
+                </li>
                 <li><a href="ethical_response.html">Ethics Response</a></li>
                 <li><a href="genai_mt_acknowledgement.html">Gen AI</a></li>
             </ul>
         </nav>
+        <!--END Set up Page mobile & Desktop-->
 
         <main>
             <div class="container">
-                <h1 class="page-title">Style Guide<span>.</span>
+                <h1 class="page-title">Style Guide<span>.</span></h1>
+                <div class="content_sitemap">
+                    <div class="h2_sitemap">
+                        <h2>
+                            This is the style guide for the handcrafts website
+                            created as a concept for the connected communities
+                            initiative.
+                        </h2>
+                        <br />
+                        <p>
+                            I have divided this style guide into 3 sections
+                            based on Don Norman's Emotional Design Levels
+                        </p>
+                    </div>
+                </div>
+                <div class="card-container">
+                    <!-- Card 1 -->
+                    <div class="card">
+                        <img
+                            class="card-img"
+                            src="work_space_3/assets/Visceral_card.jpg"
+                            alt="Visceral Card"
+                        />
+                        <h3>Visceral</h3>
+                        <br />
+                        <p>
+                            Designing for first impressions covering information
+                            architecture, layout, typography and color.
+                        </p>
+                        <a href="visceral_design.html" class="button">
+                            <button class="learn-more-button">
+                                Learn More
+                            </button></a
+                        >
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="card">
+                        <img
+                            class="card-img"
+                            src="work_space_3/assets/behavioral_card.jpg"
+                            alt="Visceral Card"
+                        />
+                        <h3>Behavioural</h3>
+                        <br />
+                        <p>
+                            Designing for functionality covering key interactive
+                            components including forms wit a focus om
+                            micro-interactions and feedback.
+                        </p>
+                        <a href="behavioural_design.html" class="button">
+                            <button class="learn-more-button">
+                                Learn More
+                            </button></a
+                        >
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="card">
+                        <img
+                            class="card-img"
+                            src="work_space_3/assets/Reflective_card.jpg"
+                            alt="Visceral Card"
+                        />
+                        <h3>Reflective</h3>
+                        <br />
+                        <p>
+                            Designing for meaning and identity covering how
+                            users see themselves in the website including
+                            ethical considerations.
+                        </p>
+                        <a href="reflective_design.html" class="button">
+                            <button class="learn-more-button">
+                                Learn More
+                            </button></a
+                        >
+                    </div>
+                </div>
             </div>
+            <!--End class container-->
         </main>
         <!--END PAGE STRUCTURE-->
+        <!-- Linking External JavaScript -->
+        <script type="module" src="js/style_guide.js"></script>
     </body>
 </html>

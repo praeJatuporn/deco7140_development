@@ -1,4 +1,13 @@
 /* Specific Accordian styles for site map page */
+@media (min-width: 768px) {
+    .card {
+        width: calc(33.33% - 14px);
+        /* Approximately 3 cards per row with gap considered */
+        margin-bottom: 20px;
+        /* Add bottom margin for wrapped rows */
+    }
+}
+
 .accordion-header {
     background-color: var(--primary-color);
     color: white;

@@ -1,0 +1,39 @@
+@media (min-width: 768px) {
+    .card {
+        width: calc(33.33% - 14px); /* Approximately 3 cards per row with gap considered */
+        margin-bottom: 20px; /* Add bottom margin for wrapped rows */
+    }
+} 
+
+/* Card container style*/
+.card {
+    width: 100%;
+    background-color: #aac8a0;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/*button*/
+.learn-more-button {
+    font-size: 2rem;
+    text-align: left;
+    margin-top: 10px;
+
+}
+
+.learn-more-button:hover {
+    background-color: #45a049; 
+}
+
