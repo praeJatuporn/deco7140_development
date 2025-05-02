@@ -25,3 +25,8 @@
     border: 1px solid var(--accent-color);
     border-radius: 0 0 10px 10px;
 }
+
+.accordion-item.open .accordion-content {
+    padding: 1rem;
+    max-height: 500px;
+}

@@ -24,7 +24,6 @@
     color: black;
 }
 
-/* Accordian content styles (detail showing) */
 .accordion-content {
     max-height: 0;
     overflow-y: auto;
@@ -34,7 +33,68 @@
     font-size: 0.95rem;
 }
 
+/*new added*/
+
 .accordion-item.open .accordion-content {
     padding: 1rem;
     max-height: 500px;
+}
+
+    
+.accordion.nested {
+    margin-left: 1rem;
+    border-left: 3px solid black;
+    padding-left: 1rem;
+    margin-top: 1rem;
+}
+                                                                                                                
+
+
+.accordion.nested .accordion-header {
+    background-color: var(--accent-color);
+    color: white;
+    border: 1px solid var(--accent-color);
+    border-radius: 10px 10px 0 0;
+}
+
+.accordion.nested .accordion-content {
+    color: var(--primary-color);
+    border: 1px solid var(--accent-color);
+    border-radius: 0 0 10px 10px;
+    max-height: 0;
+    padding-top: 0 !important; 
+    padding-bottom: 0 !important; 
+    margin: 0 !important;
+}
+
+.accordion.nested .accordion-item.open .accordion-content {
+    max-height: 500px;
+}
+
+.accordion.inner_nested {
+    margin-left: 1rem;
+    border-left: 3px solid rgb(65, 6, 6);
+    padding-left: 1rem;
+}
+                                                                                                                
+
+.accordion.inner_nested .accordion-header {
+    background-color: var(--background-color);
+    color: black;
+    border: 1px solid var(--text-color);
+    border-radius: 10px 10px 0 0;
+}
+
+.accordion.inner_nested .accordion-content {
+    color: var(--primary-color);
+    border: 1px solid var(--background-color);
+    border-radius: 0 0 10px 10px;
+    max-height: 0;
+    padding-top: 0 !important; 
+    padding-bottom: 0 !important; 
+    margin: 0 !important;
+}
+                                                                
+.accordion.inner_nested .accordion-item.open .accordion-content {
+    max-height: 1000px;
 }
