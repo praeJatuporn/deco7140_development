@@ -9,6 +9,9 @@
         <link rel="stylesheet" href="css/base.css" />
         <link rel="stylesheet" href="css/layout.css" />
         <link rel="stylesheet" href="css/components.css" />
+        <link rel="stylesheet" href="css/page_css/style_guide.css" />
+        <link rel="stylesheet" href="css/component_skeletons/card.css" />
+        <link rel="stylesheet" href="css/page_css/visceral_design.css" />
 
         <!--Favicon>-->
         <link
@@ -23,15 +26,332 @@
 
     <body>
         <!--Start page structure-->
-        <nav id="nav-mobile" aria-label="Main Navigation"></nav>
+        <nav id="nav-mobile" aria-label="Main Navigation">
+            <ul>
+                <li>
+                    <a href="index.html"><span class="icon">🏠</span></a>
+                </li>
+                <li>
+                    <a href="site_map.html"><span class="icon">🗂️</span></a>
+                </li>
+                <li>
+                    <a href="style_guide.html" aria-current="page"
+                        ><span class="icon">🎨</span></a
+                    >
+                </li>
+                <li>
+                    <a href="ethical_response.html"
+                        ><span class="icon">⚖️</span></a
+                    >
+                </li>
+                <li>
+                    <a href="genai_mt_acknowledgement.html"
+                        ><span class="icon">🤖</span></a
+                    >
+                </li>
+            </ul>
+        </nav>
 
-        <nav id="nav-desktop" aria-label="Main Navigation"></nav>
+        <nav id="nav-desktop" aria-label="Main Navigation">
+            <ul>
+                <li><a href="index.html">WP3 Home</a></li>
+                <li><a href="site_map.html">Site Map</a></li>
+                <li>
+                    <a href="style_guide.html">Style Guide</a>
+                </li>
+                <li><a href="ethical_response.html">Ethics Response</a></li>
+                <li><a href="genai_mt_acknowledgement.html">Gen AI</a></li>
+            </ul>
+        </nav>
 
+        <!--END Set up Page mobile & Desktop-->
         <main>
+            <ul class="breadcrumb">
+                <li><a href="../work_phase_3/index.html"> Home</a></li>
+                <li>
+                    <a href="../work_phase_3/style_guide.html"> Style Guide</a>
+                </li>
+                <li>Viceral Design</li>
+            </ul>
             <div class="container">
-                <h1 class="page-title">Visceral Design<span>.</span>
+                <h1 class="page-title">Visceral Design<span>.</span></h1>
+                <div class="content_sitemap">
+                    <div class="h2_sitemap">
+                        <p>
+                            The focus of this section of the Style Guide is
+                            ensuring the user has a good first impression of the
+                            site.
+                        </p>
+                        <br />
+                        <!-- Gallery Container -->
+                        <article>
+                            <h2 class="m-t-3">Page Layouts</h2>
+
+                            <!-- Gallery element -->
+                            <!-- gallery of small images -->
+                            <section class="gallery m-t-3">
+                                <img
+                                    src="work_space_3/assets/mobilehomepage.jpg"
+                                    alt="The homepage features an inspiring
+                                handcraft image at the top, showcasing knitting,
+                                crochet, and embroidery. This visual element is
+                                designed to attract users and invite them to
+                                explore the website further. Interactive slider
+                                arrows with hover effects allow users to
+                                navigate through the images, enhancing
+                                engagement. A centrally placed Join Now
+                                call-to-action button encourages immediate
+                                interaction and reinforces the sense of
+                                community. The layout supports easy navigation
+                                and encourages further exploration based on user
+                                interests. To ensure accessibility, the color
+                                scheme provides high contrast between the
+                                background and text for improved readability.
+                                Language on the page is kept concise, universal,
+                                and easy to understand—especially for non-native
+                                English speakers."
+                                />
+
+                                <img
+                                    src="work_space_3/assets/mobilecontactus.jpg"
+                                    alt="The contact page features a simple and
+                                accessible form that includes clearly labeled
+                                fields for Name, Email, Subject, and Message. A
+                                green Send button serves as a prominent
+                                call-to-action, encouraging user interaction.
+                                The button also includes a hover effect to
+                                reinforce feedback and usability. The form is
+                                designed with straightforward instructions and
+                                intuitive field labels to guide users through
+                                the message submission process. This feature
+                                supports users who may need local assistance and
+                                empowers them to confidently reach out. To
+                                ensure accessibility, the layout uses a
+                                high-contrast color scheme with black text on a
+                                white background for optimal readability."
+                                />
+
+                                <img
+                                    src="work_space_3/assets/mobileprofile.jpg"
+                                    alt="The profile page serves as a central hub
+                                that links to other key areas of the site. It
+                                allows users to manage and update their personal
+                                information, including their profile photo,
+                                name, contact details, and preferences. Privacy
+                                settings are available, enabling users to choose
+                                which personal details are visible to others.
+                                Users can also link their profile to groups they
+                                are interested in, as well as access upcoming
+                                events, resources, and a section to showcase
+                                their inspirations. This design supports user
+                                values such as a sense of belonging,
+                                collaboration, and empowerment. The layout
+                                promotes clear and intuitive navigation, helping
+                                users complete tasks with ease. To ensure
+                                accessibility, the color scheme provides high
+                                contrast between text and background for optimal
+                                readability. Language throughout the page is
+                                kept concise, inclusive, and easy to understand,
+                                especially for non-native English speakers. "
+                                />
+
+                                <img
+                                    src="work_space_3/assets/desktopcalendar.jpg"
+                                    alt="The calendar page presents a monthly view, with each day displaying the name of scheduled events along with their start times. When users hover over an event name, a card appears showing additional details, including an image, date, time, and a brief description. Clicking on an event link takes users to a dedicated information page where they can learn more about the event and complete the booking process via a clear call-to-action button. Additionally, a Subscribe button allows users to add events directly to their personal calendars on mobile devices, supporting flexibility for busy individuals. To enhance usability, users can also filter the calendar by month to explore relevant events more efficiently. These features help users stay organized, find event information quickly, and take action to participate with ease. The calendar supports the user needs who want to see the calendar. This feature aims to help users easily keep track of upcoming events, allowing them to quickly find event details and take action to participate. The page’s user-friendly design and hover interactions ensure a seamless experience for users while making event discovery and booking effortless."
+                                />
+                                <img
+                                    src="work_space_3/assets/desktopgallery.jpg"
+                                    alt="The Gallery page features images of
+                                knitting, crochet, and embroidery displayed
+                                prominently at the top of the page. The word
+                                Gallery is centered over the main image,
+                                clearly indicating the purpose of the page.
+                                Users can submit their own handcraft photos or
+                                videos through a green Gallery Submissions
+                                button, which links to a separate upload page.
+                                Below the main section, users can browse a
+                                collection of albums categorized by three
+                                different handcraft activities. Each album links
+                                to a dedicated page showcasing related works. A
+                                search bar is provided to help users find
+                                specific galleries with ease. The layout follows
+                                a logical structure, with a white background and
+                                black text to ensure high readability and
+                                accessibility. This page supports key user
+                                values such as collaboration, empowerment, and a
+                                sense of belonging by fostering a space where
+                                individuals can share and explore creative
+                                projects within the community."
+                                />
+                            </section>
+                            <!-- Large Image Viewer -->
+                            <aside
+                                class="viewer"
+                                id="viewer"
+                                aria-hidden="true"
+                            >
+                                <button
+                                    id="close-viewer"
+                                    aria-label="Close image viewer"
+                                >
+                                    ✖
+                                </button>
+                                <img id="viewer-img" src="" alt="" />
+                                <p id="viewer-caption"></p>
+                            </aside>
+                        </article>
+                        <!--end of gallery container-->
+
+                        <!--Colour Scheme explanation-->
+                        <article class="card-container">
+                            <div class="cards">
+                                <h2>Colour Scheme</h2>
+                                <br />
+                                <p>
+                                    This ideal colour palette was chosen to
+                                    reflect a warm, yarn-like, welcoming, and
+                                    creative atmosphere that suits the handcraft
+                                    community. It served as a conceptual
+                                    foundation and was carefully adapted and
+                                    applied to the overall webpage design to
+                                    ensure emotional engagement, visual
+                                    coherence, and accessibility.
+                                </p>
+                                <br />
+                                <div class="image-overlay-container">
+                                    <img
+                                        class="card-img"
+                                        src="work_space_3/assets/colorpalette.jpg"
+                                        alt="Colour scheme"
+                                    />
+                                    <div class="overlay-text">
+                                        <p>
+                                            Yellow – Page background (warm &
+                                            calming)
+                                        </p>
+                                        <p>
+                                            Green – Buttons and call-to-action
+                                        </p>
+                                        <p>
+                                            White – Content area (clean &
+                                            readable)
+                                        </p>
+                                        <p>
+                                            Black – Text (high contrast for
+                                            accessibility)
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!--Typography explanation-->
+                        <article class="card-container">
+                            <div class="cards">
+                                <h2>Typography</h2>
+                                <br />
+                                <p>
+                                    The typography of this website is designed
+                                    for readability, clarity, and inclusiveness.
+                                    Font choices help users, especially
+                                    non-native English speakers, easily scan and
+                                    understand the content.
+                                </p>
+                                <br />
+                                <div class="image-overlay-container">
+                                    <img
+                                        class="card-img"
+                                        src="work_space_3/assets/poppinsfont.png"
+                                        alt="Font Used"
+                                    />
+                                    <div class="overlay-text">
+                                        <p>
+                                            "Poppins" font for all headings and
+                                            body text. This font was chosen for
+                                            its modern, clean appearance and
+                                            strong readability.
+                                        </p>
+                                        <br />
+                                        <p>
+                                            A sans-serif, it supports clarity
+                                            across different screen sizes and
+                                            works well for both native and
+                                            non-native English speakers.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <!--Typography explanation-->
+                        <article class="card-container">
+                            <div class="cards">
+                                <h2>Typography Rules WCAG 2.1 </h2>
+                                <br />
+                                <p></p>
+                                <br />
+                                <div class="image-overlay-container">
+                                    <img
+                                        class="card-img"
+                                        src="work_space_3/assets/WCAG.png"
+                                        alt="Typography rules"
+                                    />
+                                    <div class="overlay-text">
+                                        <p>
+                                            1. Using no more than 2-3 font types
+                                            Using font "Poppins" is a modern
+                                            sans-serif that is very readable. To
+                                            ensures visual consistency and
+                                            readability.
+                                        </p>
+                                        <br />
+                                        <p>
+                                            2. Create a visual hierarchy
+                                            Applying different sizes clearly
+                                            such as h1: 3rem(48px), h2: 1.5
+                                            rem(24px), p: 1 rem(16px) etc.
+                                        </p>
+                                        <br />
+                                        <p>
+                                            3. Use scale: rem (1.4.4 Resize
+                                            Text) Applying rem scale with the
+                                            font size such as h1: 3rem, h2: 1.5
+                                            rem), p: 1 rem etc. instead of fixed
+                                            px for flexible layouts and
+                                            responsive.
+                                        </p>
+                                        <br />
+                                        <p>
+                                            4. Clear font-weight usage (1.3.1
+                                            Info and Relationships) Applying
+                                            font-weight such as bold. To help
+                                            convey structure without relying on
+                                            color alone
+                                        </p>
+                                        <br />
+                                        <p>
+                                            5.Line height (Technique C29)
+                                            Applying line-height 1.5 to improves
+                                            reading comfort.
+                                        </p><br>
+                                        <p>
+                                            6. High color contrast (1.4.3
+                                            Contrast Minimum) Applying the color
+                                            between text and background which
+                                            the text is black and background is
+                                            white.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
             </div>
+            <!--End class container-->
         </main>
         <!--END PAGE STRUCTURE-->
+        <!-- Linking External JavaScript -->
+        <script type="module" src="js/visceral_design.js"></script>
+        <script type="module" src="js/modules/viewer.js"></script>
     </body>
 </html>

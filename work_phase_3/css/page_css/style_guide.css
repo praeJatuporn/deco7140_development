@@ -1,3 +1,4 @@
+@import url("../component_skeletons/card.css");
 @media (min-width: 768px) {
     .card {
         width: calc(33.33% - 14px); /* Approximately 3 cards per row with gap considered */
@@ -15,15 +16,6 @@
     transition: transform 0.3s ease-in-out;
 }
 
-.card:hover {
-    transform: scale(1.05);
-}
-
-.card-img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
 
 /*button*/
 .learn-more-button {

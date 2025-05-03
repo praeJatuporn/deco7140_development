@@ -63,6 +63,7 @@
 
 }
 
+
 @media (max-width: 768px) {
     .page-title .content {
         max-width: 90%;
@@ -247,4 +248,59 @@ nav ul {
     cursor: pointer;
     position: left;
 
+}
+
+/*breadcrumb*/
+.breadcrumb {
+    height: fit-content;
+    margin-bottom: 1%;
+    padding-top: 30;
+    margin-top: 100px;
+    font-weight: bold;
+}
+
+.breadcrumb {
+    height: fit-content;
+    margin-bottom: 1%;
+}
+
+ul.breadcrumb {
+    list-style: none;
+    background-color: transparent;
+}
+
+ul.breadcrumb li {
+    display: inline-block;
+    font-size: 1.5rem;
+    height: fit-content;
+    width: fit-content;
+}
+
+ul.breadcrumb li a {
+    display: inline;
+    padding: 0;
+}
+
+/* Add a symbol (❯) */
+ul.breadcrumb li+li:before {
+    color: black;
+    content: "\276F";
+    margin-left: 0.01%;
+}
+
+/* Add a color to all links inside the list */
+ul.breadcrumb li a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: black;
+    width: fit-content;
+    height: fit-content;
+    font-weight: normal;
+}
+
+/* Add a color on mouse-over */
+ul.breadcrumb li a:hover {
+    color: black;
+    text-decoration: underline;
+    background-color: rgb(211, 213, 209);
 }

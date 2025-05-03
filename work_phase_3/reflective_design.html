@@ -9,6 +9,8 @@
         <link rel="stylesheet" href="css/base.css" />
         <link rel="stylesheet" href="css/layout.css" />
         <link rel="stylesheet" href="css/components.css" />
+        <link rel="stylesheet" href="css/page_css/style_guide.css" />
+        <link rel="stylesheet" href="css/component_skeletons/card.css" />
 
         <!--Favicon>-->
         <link
@@ -23,15 +25,60 @@
 
     <body>
         <!--Start page structure-->
-        <nav id="nav-mobile" aria-label="Main Navigation"></nav>
+        <nav id="nav-mobile" aria-label="Main Navigation">
+            <ul>
+                <li>
+                    <a href="index.html"><span class="icon">🏠</span></a>
+                </li>
+                <li>
+                    <a href="site_map.html"><span class="icon">🗂️</span></a>
+                </li>
+                <li>
+                    <a href="style_guide.html" aria-current="page"
+                        ><span class="icon">🎨</span></a
+                    >
+                </li>
+                <li>
+                    <a href="ethical_response.html"
+                        ><span class="icon">⚖️</span></a
+                    >
+                </li>
+                <li>
+                    <a href="genai_mt_acknowledgement.html"
+                        ><span class="icon">🤖</span></a
+                    >
+                </li>
+            </ul>
+        </nav>
 
-        <nav id="nav-desktop" aria-label="Main Navigation"></nav>
+        <nav id="nav-desktop" aria-label="Main Navigation">
+            <ul>
+                <li><a href="index.html">WP3 Home</a></li>
+                <li><a href="site_map.html">Site Map</a></li>
+                <li>
+                    <a href="style_guide.html">Style Guide</a>
+                </li>
+                <li><a href="ethical_response.html">Ethics Response</a></li>
+                <li><a href="genai_mt_acknowledgement.html">Gen AI</a></li>
+            </ul>
+        </nav>
+        <!--END Set up Page mobile & Desktop-->
 
         <main>
             <div class="container">
-                <h1 class="page-title">Reflextive Design<span>.</span>
+                <h1 class="page-title">Reflextive Design<span>.</span></h1>
+                <div class="content_sitemap">
+                    <div class="h2_sitemap">
+                        <h2>
+                        </h2>
+                    </div>
+                </div>
             </div>
+            <!--End class container-->
         </main>
         <!--END PAGE STRUCTURE-->
+        <!-- Linking External JavaScript -->
+        <script type="module" src="js/style_guide.js"></script>
     </body>
 </html>
+

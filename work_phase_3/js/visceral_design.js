@@ -2,11 +2,13 @@
  * IMPORTS
  * Keep track of external modules being used
  * */
+import { initGalleryViewer } from "./modules/viewer.js";
 
 /**
  * CONSTANTS
  * Define values that don't change e.g. page titles, URLs, etc.
  * */
+
 
 /**
  * VARIABLES
@@ -24,3 +26,6 @@
  * */
 
 // when the page fully loads
+document.addEventListener("DOMContentLoaded", () => {
+    initGalleryViewer();
+});

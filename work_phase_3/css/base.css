@@ -47,11 +47,6 @@ h3 {
     font-weight: bolder;
 }
 
-้h4 {
-    font-size: 1rem;
-    color: var(--text-color);
-}
-
 span {
     color: var(--secondary-color)
 }

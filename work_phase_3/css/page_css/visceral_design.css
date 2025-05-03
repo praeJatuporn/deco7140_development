@@ -1,0 +1,53 @@
+@import url("../component_skeletons/gallery.css");
+
+.explain-visceral:hover {
+    background-color: #b5f08c; 
+    transition: background-color 0.3s ease; 
+}
+
+.cards{
+    background-color:white;
+}
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.image-overlay-container {
+    position: relative;
+    width: fit-content;
+    display: inline-block;
+}
+
+.card-img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/*text on picture*/
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgb(237, 237, 236); 
+    color: black;
+    padding: 50px 50px;
+    border-radius: 8px;
+    font-size: 1rem;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+
+.image-overlay-container:hover .overlay-text {
+    opacity: 1;
+}
+
