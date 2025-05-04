@@ -3,27 +3,49 @@
  * Keep track of external modules being used
  * */
 import { initAccordion } from "./modules/accordion.js";
+import { fetchGetData } from "./modules/getData.js";
+
 /**
  * CONSTANTS
- * Define values that don't change e.g. page titles, URLs, etc.
- * */
+ */
 const PAGE_NAME = "reflective_design.js";
+
 /**
  * VARIABLES
- * Define values that will change e.g. user inputs, counters, etc.
- * */
+ */
 let message = "Page has fully loaded";
-/**
- * FUNCTIONS
- * Group code into functions to make it reusable
- * */
 
 /**
  * EVENT LISTENERS
- * The code that runs when a user interacts with the page
- * */
-
-// when the page fully loads
+ */
 document.addEventListener("DOMContentLoaded", () => {
     initAccordion(".accordion");
-}); 
+
+    const container = document.getElementById("community-list");
+
+    fetchGetData("https://yourdomain/api/community/", {
+        student_number: "s1234567",
+        uqcloud_zone_id: "abc123",
+    }).then((data) => {
+        if (!data) {
+            container.innerHTML =
+                '<p class="text-danger">Unable to load community members.</p>';
+            return;
+        }
+
+        data.forEach((member) => {
+            const card = document.createElement("article");
+            card.className = "community-card";
+
+            card.innerHTML = `
+                <img src="${member.photo}" alt="Photo of ${member.name}" />
+                <div class="card-body">
+                    <h3>${member.name}</h3>
+                    <p>${member.message || "No message provided."}</p>
+                </div>
+            `;
+
+            container.appendChild(card);
+        });
+    });
+});
