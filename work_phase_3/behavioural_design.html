@@ -9,6 +9,10 @@
         <link rel="stylesheet" href="css/base.css" />
         <link rel="stylesheet" href="css/layout.css" />
         <link rel="stylesheet" href="css/components.css" />
+        <link rel="stylesheet" href="css/page_css/style_guide.css" />
+        <link rel="stylesheet" href="css/component_skeletons/card.css" />
+        <link rel="stylesheet" href="css/page_css/visceral_design.css" />
+        <link rel="stylesheet" href="css/page_css/behavioural_design.css" />
 
         <!--Favicon>-->
         <link
@@ -23,15 +27,253 @@
 
     <body>
         <!--Start page structure-->
-        <nav id="nav-mobile" aria-label="Main Navigation"></nav>
+        <nav id="nav-mobile" aria-label="Main Navigation">
+            <ul>
+                <li>
+                    <a href="index.html"><span class="icon">🏠</span></a>
+                </li>
+                <li>
+                    <a href="site_map.html"><span class="icon">🗂️</span></a>
+                </li>
+                <li>
+                    <a href="style_guide.html"><span class="icon">🎨</span></a>
+                </li>
+                <li>
+                    <a href="ethical_response.html"
+                        ><span class="icon">⚖️</span></a
+                    >
+                </li>
+                <li>
+                    <a href="genai_mt_acknowledgement.html"
+                        ><span class="icon">🤖</span></a
+                    >
+                </li>
+            </ul>
+        </nav>
 
-        <nav id="nav-desktop" aria-label="Main Navigation"></nav>
+        <nav id="nav-desktop" aria-label="Main Navigation">
+            <ul>
+                <li><a href="index.html">WP3 Home</a></li>
+                <li><a href="site_map.html">Site Map</a></li>
+                <li>
+                    <a href="style_guide.html">Style Guide</a>
+                </li>
+                <li><a href="ethical_response.html">Ethics Response</a></li>
+                <li><a href="genai_mt_acknowledgement.html">Gen AI</a></li>
+            </ul>
+        </nav>
 
+        <!--END Set up Page mobile & Desktop-->
         <main>
+            <ul class="breadcrumb">
+                <li><a href="../work_phase_3/index.html"> Home</a></li>
+                <li>
+                    <a href="../work_phase_3/style_guide.html"> Style Guide</a>
+                </li>
+                <li aria-current="page">Behavioural Design</li>
+            </ul>
             <div class="container">
-                <h1 class="page-title">Behavioural Design<span>.</span>
+                <h1 class="page-title">Behavioural Design<span>.</span></h1>
+                <div class="content_sitemap">
+                    <div class="h2_sitemap">
+                        <p>
+                            The focus of this section of the Style Guide is
+                            ensuring the user needs for usability and function
+                            are supported.
+                        </p>
+                        <br />
+
+                        <!--Colour Scheme explanation-->
+                        <article class="card-container">
+                            <div class="cards">
+                                <h2 class="h2link">
+                                    <a href="#linkStyles">Links</a>
+                                    <a href="#Navigation">Navigation</a>
+                                    <a href="#Cards">Cards</a>
+                                    <a href="#Icons">Icons</a>
+                                    <a href="#Buttons">Buttons</a>
+                                    <a href="#Forms">Forms</a>
+                                </h2>
+                            </div>
+                        </article>
+                        <article>
+                            <h3 id="linkStyles">Link Styles</h3>
+                            <p>
+                                This section shows how link states (normal,
+                                hover, visited) are styled for accessibility and
+                                clarity
+                            </p>
+
+                            <h3 id="Navigation">Menus and Navigation</h3>
+                            <p>
+                                The navigation reflects the site's information
+                                architecture and supports usability through
+                                clear labels and grouping.
+                            </p>
+                            <p>
+                                Navigation mock-up showing menu layout and
+                                hierarchy
+                            </p>
+
+                            <h3 id="Cards">Card Components</h3>
+                            <p>
+                                This section includes visual mock-ups of card
+                                Components used for summarising content or
+                                directing users to more detail.
+                            </p>
+
+                            <p>
+                                Card layout showing content structure and
+                                interaction
+                            </p>
+
+                            <h3 id="Icons">Icon Set</h3>
+                            <p>
+                                Icons are used to support understanding in
+                                buttons and navigation. The design maintains
+                                consistency in shape, weight and meaning.
+                            </p>
+
+                            <p>
+                                Icon usuage examples in navigation and buttons
+                            </p>
+
+                            <h3 id="Buttons">Interactive Buttons</h3>
+                            <!--Learn more button-->
+                            <button class="learn-more-button">
+                                Learn More
+                            </button>
+                            <p class="explanation">
+                                Button is designed with a large font size to
+                                makes the text easily readable and is clearly
+                                identifiable as clickable through its hover
+                                effect. The color change to green on hover
+                                indicates that the button triggers an action.
+                                The use of high contrast colors and the
+                                background change on hover help users visually
+                                recognize the button as clickable and it
+                                provides immediate visual feedback when users
+                                interact with the button. To ensure that they
+                                know their action has been acknowledged.
+                            </p>
+                            <!-- Submit button -->
+                            <div class="button-example">
+                                <button class="btn-primary">Submit</button>
+                                <p class="explanation">
+                                    This button is designed to be highly visible
+                                    and easily identifiable as the most
+                                    important action on the page. It uses a bold
+                                    color (green) to attract attention and make
+                                    it stand out. The hover effect changes the
+                                    background color, signaling interactivity,
+                                    and offering immediate visual feedback that
+                                    the button is clickable.
+                                </p>
+                            </div>
+                            <!--less important button) -->
+                            <div class="button-example">
+                                <button class="btn-tertiary">Learn More</button>
+                                <p class="explanation">
+                                    "The button is designed with simplicity in
+                                    mind, featuring a light border or a white
+                                    background. It does not overpower the
+                                    layout, giving users a sense of a less
+                                    important interaction. Although the button
+                                    appears minimalist, the border, text, or
+                                    icon help signify its clickable nature. The
+                                    hover effect provides an additional visual
+                                    cue, allowing users to recognize that the
+                                    button is interactive without drawing too
+                                    much attention. When hovered over, it
+                                    changes its appearance, providing feedback
+                                    to the user."
+                                </p>
+                            </div>
+                            <!-- (Icon Button) -->
+                            <div class="button-example">
+                                <button class="btn-icon" aria-label="Search">
+                                    🔍
+                                </button>
+                                <p class="explanation">
+                                    This icon button uses the icon to represent
+                                    an action for search with out text. This
+                                    allows users to quickly understand the
+                                    purpose of the button without needing
+                                    additional text. The icon itself signifies
+                                    the action the button performs, and the use
+                                    of aria-label enhances accessibility. The
+                                    visual change in color when hovering or
+                                    clicking provides immediate feedback,
+                                    confirming that the button is interactive.
+                                </p>
+                            </div>
+
+                            <h3 id="Forms">Form Example</h3>
+                            <p class="explanation">
+                                This form includes real-time validation and
+                                submits data to an API. Feedback is provided on
+                                both validation and errors API success/failure.
+                            </p>
+                            <!-- Form -->
+                            <form
+                                id="community-form"
+                                enctype="multipart/form-data"
+                            >
+                                <label for="name">Full Name:</label>
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    required
+                                />
+                                <br />
+
+                                <label for="email">Email:</label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    required
+                                />
+                                <br />
+
+                                <label for="message">Message (optional):</label>
+                                <textarea
+                                    id="message"
+                                    name="message"
+                                ></textarea>
+                                <br />
+
+                                <label for="photo"
+                                    >Upload Photo (optional):</label
+                                >
+                                <input
+                                    type="file"
+                                    id="photo"
+                                    name="photo"
+                                    accept="image/*"
+                                />
+                                <br />
+
+                                <button type="submit">
+                                    Join the Community
+                                </button>
+                            </form>
+
+                            <p id="form-feedback" aria-level="polite"></p>
+                            <!-- Feedback message here -->
+
+                            <!-- member's data shown -->
+                            <div id="community-list"></div>
+                            <!-- For member's data shown from API -->
+                        </article>
+                    </div>
+                </div>
             </div>
         </main>
         <!--END PAGE STRUCTURE-->
+        <!-- Linking External JavaScript -->
+
+        <script type="module" src="js/behavioural_design.js"></script>
     </body>
 </html>

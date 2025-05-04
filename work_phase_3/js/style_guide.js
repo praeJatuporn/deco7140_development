@@ -7,12 +7,12 @@
  * CONSTANTS
  * Define values that don't change e.g. page titles, URLs, etc.
  * */
-
+const PAGE_NAME = "style_guide.js";
 /**
  * VARIABLES
  * Define values that will change e.g. user inputs, counters, etc.
  * */
-
+let message = "Page has fully loaded";
 /**
  * FUNCTIONS
  * Group code into functions to make it reusable
@@ -24,3 +24,6 @@
  * */
 
 // when the page fully loads
+document.addEventListener("DOMContentLoaded", () => {
+    console.log("Style Guide page loaded");
+});
