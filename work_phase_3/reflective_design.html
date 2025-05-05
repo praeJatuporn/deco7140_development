@@ -791,6 +791,120 @@
                             </section>
                         </div>
                     </div>
+                    <!--next accordion-->
+                    <!-- Accordion Item 5 IBM checker -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            ▷ Accessibility Audit
+                        </button>
+                        <div class="accordion-content">
+                            <p class="m-y-3">
+                                According to my page, there are only 3 issues
+                                examples. One is Focus indicator not visible on
+                                file input and the other two are Input fields,
+                                Full name box and Message box. Thus, I decided
+                                to group them together.
+                            </p>
+                            <!-- Nested Accordion for Sub-pages -->
+                            <div class="accordion nested">
+                                <div class="accordion-item">
+                                    <button class="accordion-header">
+                                        ▹▷ Focus indicator not visible on file
+                                        input
+                                    </button>
+                                    <div class="accordion-content">
+                                        <p class="m-y-3">Choose file button</p>
+                                        <u>Issue identified</u>
+                                        <p>
+                                            Element location is choose file
+                                            button. It may not show a visible
+                                            focus indicator when navigated via
+                                            keyboard.
+                                        </p>
+                                        <u>WCAG Success Criteria</u>
+                                        <p>
+                                            2.4.7 Focus Visible level AA (IBM
+                                            Rule: style_focus_visible).
+                                        </p>
+                                        <p>
+                                            Any keyboard operable user interface
+                                            has a mode of operation where the
+                                            keyboard focus indicator is visible.
+                                        </p>
+                                        <u>Impact on users</u>
+                                        <p>
+                                            People who rely on keyboard
+                                            control,use a screen reader,
+                                            including blind, low vision, and
+                                            neurodivergent people. They may not
+                                            know that the file input has
+                                            received focus, causing confusion
+                                            and accessibility barriers.
+                                        </p>
+                                        <u>how this could be fixed</u>
+                                        <p>
+                                            We can use CSS to enhance focus
+                                            visibility. For example, adding
+                                            border or outline that appears
+                                            clearly when the input is focused.
+                                            This ensures that users can clearly
+                                            see which element is selected when
+                                            navigating with the keyboard.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Nested Accordion for Sub-pages -->
+                            <div class="accordion nested">
+                                <div class="accordion-item">
+                                    <button class="accordion-header">
+                                        ▹▷ Input fields are not grouped.
+                                    </button>
+                                    <div class="accordion-content">
+                                        <p class="m-y-3">Full name box</p>
+                                        <u>Issue identified</u>
+                                        <p>
+                                            Users may not understand what type
+                                            of information they are expected to
+                                            provide, such as whether it relates
+                                            to personal details or something
+                                            else."
+                                        </p>
+                                        <u>WCAG Success Criteria</u>
+                                        <p>
+                                            1.3.1 Info and Relationships Level A
+                                            (IBM Rule: input_fields_grouped)
+                                        </p>
+                                        <p>
+                                            Information, structure, and
+                                            relationships conveyed through
+                                            presentation can be programmatically
+                                            determined or are available in text.
+                                        </p>
+                                        <u>Impact on users</u>
+                                        <p>
+                                            It can cause confusion, incomplete
+                                            submissions or make navigation
+                                            harder to users who use a screen
+                                            reader, including blind, low vision,
+                                            and neurodivergent people and also
+                                            people who rely on keyboard control.
+                                        </p>
+                                        <u>how this could be fixed</u>
+                                        <p>
+                                            Wrap all related inputs including
+                                            Full Name, Email and Message in a
+                                            semantic HTML like fieldset, and
+                                            include a legend that describes the
+                                            group. This helps users understand
+                                            the purpose of each group.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--done nested-->
+                        </div>
+                    </div>
                 </section>
             </div>
         </main>
