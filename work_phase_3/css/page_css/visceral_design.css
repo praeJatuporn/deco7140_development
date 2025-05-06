@@ -1,13 +1,14 @@
 @import url("../component_skeletons/gallery.css");
 
 .explain-visceral:hover {
-    background-color: #b5f08c; 
-    transition: background-color 0.3s ease; 
+    background-color: #b5f08c;
+    transition: background-color 0.3s ease;
 }
 
-.cards{
-    background-color:white;
+.cards {
+    background-color: white;
 }
+
 .card:hover {
     transform: scale(1.05);
 }
@@ -36,7 +37,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: rgb(237, 237, 236); 
+    background: rgb(237, 237, 236);
     color: black;
     padding: 50px 50px;
     border-radius: 8px;
@@ -51,3 +52,8 @@
     opacity: 1;
 }
 
+.topic {
+    background-color: bisque;
+    font-weight: bold;
+    font-size: 2.5rem;
+}
