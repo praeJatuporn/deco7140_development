@@ -23,9 +23,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const container = document.getElementById("community-list");
 
-    fetchGetData("https://yourdomain/api/community/", {
-        student_number: "s1234567",
-        uqcloud_zone_id: "abc123",
+    fetchGetData("https://damp-castle-86239-1b70ee448fbd.herokuapp.com/decoapi/community/", {
+        student_number: "s4898675",
+        uqcloud_zone_id: "59a50ef0",
     }).then((data) => {
         if (!data) {
             container.innerHTML =
