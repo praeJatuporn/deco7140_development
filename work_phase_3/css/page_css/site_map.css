@@ -1,4 +1,4 @@
-/* Specific Accordian styles for site map page */
+/*Card layout on screens*/
 @media (min-width: 768px) {
     .card {
         width: calc(33.33% - 14px);
@@ -8,20 +8,12 @@
     }
 }
 
+/*Accordion styles*/
 .accordion-header {
     background-color: var(--primary-color);
     color: white;
 }
 
-/*Sub-pages styles*/
-/*nested accordion styles*/
-.accordion.nested {
-    margin-left: 1rem;
-    border-left: 3px solid black;
-    padding-left: 1rem;
-}
-
-/*nested accordion styles*/
 .accordion.nested .accordion-header {
     background-color: rgb(160, 217, 242);
     color: var(--accent-color);
@@ -29,12 +21,20 @@
     border-radius: 10px 10px 0 0;
 }
 
+/*nested accordion styles*/
+.accordion.nested {
+    margin-left: 1rem;
+    border-left: 3px solid black;
+    padding-left: 1rem;
+}
+
+/*content inside accordion styles*/
 .accordion.nested .accordion-content {
-    color: rosybrown;
     border: 1px solid var(--accent-color);
     border-radius: 0 0 10px 10px;
 }
 
+/*when the accordion is open styles*/
 .accordion-item.open .accordion-content {
     padding: 1rem;
     max-height: 500px;

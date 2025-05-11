@@ -242,6 +242,7 @@ nav ul {
     margin-top: 10px;
 }
 
+/*button style*/
 .button {
     padding: 20px;
     border-color: black;
@@ -250,11 +251,12 @@ nav ul {
 
 }
 
-/*breadcrumb*/
+
+/*breadcrumb navigation for visceral and behavioural page*/
 .breadcrumb {
     height: fit-content;
     margin-bottom: 1%;
-    padding-top: 30;
+    padding-top: 30px;
     margin-top: 100px;
     font-weight: bold;
 }
@@ -281,14 +283,14 @@ ul.breadcrumb li a {
     padding: 0;
 }
 
-/* Add a symbol (❯) */
+/* Add a symbol (❯) to use with braedcrumb*/
 ul.breadcrumb li+li:before {
     color: black;
     content: "\276F";
     margin-left: 0.01%;
 }
 
-/* Add a color to all links inside the list */
+/* breadcrumb text style*/
 ul.breadcrumb li a {
     text-decoration: none;
     font-size: 1.5rem;
@@ -298,7 +300,7 @@ ul.breadcrumb li a {
     font-weight: normal;
 }
 
-/* Add a color on mouse-over */
+/* breadcrumb hover style */
 ul.breadcrumb li a:hover {
     color: black;
     text-decoration: underline;

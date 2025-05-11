@@ -26,7 +26,7 @@
     opacity: 1;
 }
 
-/* === Tooltip Styles === */
+/*  Tooltip Styles  */
 .interactive-highlight::after,
 .interactive-highlight-stories::after {
     position: absolute;

@@ -1,3 +1,4 @@
+/*Text link style*/
 .h2link {
     display: flex;
     gap: 20px;
@@ -18,7 +19,7 @@
     background-color: rgb(208, 135, 62);
 }
 
-/*form*/
+/*form example style*/
 #community-form {
     max-width: 500px;
     margin: 0 auto;
@@ -28,8 +29,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-
-
+/*Button style for form*/
 .community-form button {
     padding: 12px 20px;
     background-color: #4CAF50;
@@ -38,6 +38,7 @@
     border-radius: 4px;
     cursor: pointer;
 }
+
 
 #community-form button:hover {
     background-color: #45a049;
@@ -65,32 +66,27 @@ button:hover {
 
 button:active {
     background-color: #45a049;
-    /* Darker green when pressed */
 }
 
 button:disabled {
     background-color: #d3d3d3;
-    /* Grey background for disabled */
     cursor: not-allowed;
 }
 
 .btn-primary {
     background-color: #4CAF50;
-    /* Green for primary button */
     color: white;
     border: none;
 }
 
 .btn-secondary {
     background-color: #f1f1f1;
-    /* Light grey for secondary button */
     color: #333;
     border: 1px solid #ccc;
 }
 
 .btn-tertiary {
     background-color: #ffffff;
-    /* White for tertiary button */
     color: #555;
     border: 1px solid #ddd;
 }
@@ -133,7 +129,6 @@ button:disabled {
     background-color: #fffaf4;
     border: 1px solid #ccc;
     border-radius: 8px;
-    font-family: "Poppins", sans-serif;
 }
 
 /* Label styles for better readability and spacing */

@@ -20,7 +20,6 @@
 }
 
 .accordion.nested .accordion-content {
-    color: rosybrown;
     border: 1px solid var(--accent-color);
     border-radius: 0 0 10px 10px;
 }

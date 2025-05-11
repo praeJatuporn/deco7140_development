@@ -1,0 +1,251 @@
+/* Navigation menu*/
+.navbar {
+    background-color: var(--primary-color);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+/* Mobile menu */
+.menu {
+    list-style: none;
+    display: none;
+    flex-direction: column;
+    background-color: var(--primary-color);
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 999;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu li {
+    border-bottom: none;
+    transition: background-color 0.3s ease;
+}
+
+.menu li:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.menu li:hover a {
+    background-color: var(--accent-color);
+    color: #ffffff;
+}
+
+.menu a {
+    color: var(--text-color);
+    text-decoration: none;
+    display: block;
+    padding: 1rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Toggle Button */
+.menu-toggle {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 1.75rem;
+    cursor: pointer;
+    position: absolute;
+    left: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1001;
+    padding: 0.5rem;
+    border-radius: 0.375rem;
+    transition: background-color 0.3s ease, outline 0.2s ease;
+}
+
+.menu-toggle:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.menu-toggle:focus-visible {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 2px;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.menu.show {
+    display: flex;
+}
+
+/* Desktop menu */
+@media (min-width: 768px) {
+    .navbar {
+        justify-content: center;
+    }
+
+    .menu {
+        display: flex !important;
+        position: static;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        box-shadow: none;
+        gap: 1.5rem;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .menu li {
+        border: none;
+        padding: 0;
+    }
+
+    .menu li:hover {
+        background-color: transparent;
+    }
+
+    .menu li:hover a {
+        background-color: var(--accent-color);
+        color: #ffffff;
+    }
+
+    .menu a {
+        padding: 0.75rem 1rem;
+    }
+}
+
+/*Button style */
+.button {
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* PAGE TITLE + HERO IMAGE*/
+.page-title {
+    background-color: var(--warm-beige);
+    padding: 3rem 1rem 2rem;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.page-title .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.page-title h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.hero-image {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/*ACCESSIBLE TOOLTIP */
+.interactive-highlight {
+    position: relative;
+}
+
+.interactive-highlight::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    font-size: 0.75rem;
+    padding: 0.4rem 0.6rem;
+    border-radius: 0.25rem;
+    opacity: 0;
+    white-space: nowrap;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 10;
+}
+
+.interactive-highlight:focus::after,
+.interactive-highlight:active::after {
+    opacity: 1;
+}
+
+/* footer style */
+.footer {
+    background-color: var(--primary-color);
+    padding: 1.5rem 1rem;
+    font-size: 0.875rem;
+    color: var(--text-color);
+    border-top: 1px solid #ccc;
+}
+
+.wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.footer-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--accent-color);
+}
+
+/*โลโก้ + ชื่อ */
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer-logo {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
