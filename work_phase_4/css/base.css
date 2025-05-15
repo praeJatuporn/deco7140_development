@@ -69,7 +69,7 @@ h3 {
 }
 
 span {
-    color: var(--secondary-color);
+    color: var(--text-color);
 }
 
 p {

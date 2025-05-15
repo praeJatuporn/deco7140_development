@@ -1,0 +1,84 @@
+/*h2 style*/
+.center-heading {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+}
+
+/*feedback form*/
+/* control the box sizing for all page  */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* 2 feedbacks per columns */
+#community-list {
+    background-color: var(--primary-color);
+    border-radius: 1rem;
+    padding: 2rem;
+    margin: 3rem auto;
+    max-width: 1000px;
+    color: var(--text-color);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    font-family: 'Nunito', sans-serif;
+    line-height: 1.5;
+    font-size: 1rem;
+}
+
+/* Each feedback card style  */
+#community-list article {
+    display: flex;
+    gap: 0.8rem;
+    padding: 1rem;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 0.65rem;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+    align-items: flex-start;
+}
+
+/* Picture feedback (square) */
+#community-list article img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 0;
+    border: 3px solid var(--primary-color);
+}
+
+/* Feedback Content */
+#community-list article h3 {
+    margin: 0 0 0.3rem;
+    font-size: 1.05rem;
+    font-weight: bold;
+}
+
+#community-list article p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.45;
+    color: var(--text-color);
+}
+
+/* Mobile site: 1 column per feedback */
+@media (max-width: 700px) {
+    #community-list {
+        grid-template-columns: 1fr;
+    }
+
+    #community-list article {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #community-list article img {
+        margin-bottom: 0.8rem;
+    }
+}

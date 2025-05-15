@@ -200,7 +200,7 @@
 .footer {
     background-color: var(--primary-color);
     padding: 1.5rem 1rem;
-    font-size: 0.875rem;
+    font-size: 1rem;
     color: var(--text-color);
     border-top: 1px solid #ccc;
 }
@@ -237,7 +237,7 @@
     color: var(--accent-color);
 }
 
-/*โลโก้ + ชื่อ */
+/*name & Logo*/
 .footer-brand {
     display: flex;
     align-items: center;
