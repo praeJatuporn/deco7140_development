@@ -1,0 +1,58 @@
+/*card for gen ai*/
+/*background grid section*/
+.card-grid-section {
+    padding: 2rem;
+    background-color: var(--primary-color);
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* for mobile site */
+@media screen and (max-width: 768px) {
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/*text style*/
+.h1-heading {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+    position: relative;
+    z-index: 1;
+}
+
+.p-content {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-color);
+    text-shadow: 0 0 4px #ffd966, 0 0 8px #ffd966;
+    animation: glow-gold 1.5s infinite ease-in-out;
+}
+
+@keyframes glow-gold {
+
+    0%,
+    100% {
+        text-shadow: 0 0 4px #ffd966, 0 0 8px #ffd966;
+    }
+
+    50% {
+        text-shadow: 0 0 6px #ffcc00, 0 0 14px #ffcc00;
+    }
+}
+
+.card-back p {
+    font-size: 1rem;
+    line-height: 1.4;
+    padding: 0.1rem;
+}
