@@ -36,20 +36,22 @@ function setupMenu(page, msg) {
                 const submenu = parent.querySelector(".submenu");
                 const isMobile = window.innerWidth < 768;
 
-                if (submenu && isMobile) {
-                    event.preventDefault();
+                if (isMobile) {
+                    event.preventDefault(); // ✅ ป้องกันไม่ให้คลิกแล้วเปลี่ยนหน้า
 
-                    // 🔁 ปิด submenu ที่เปิดอยู่ ยกเว้นตัวที่คลิก
-                    document
-                        .querySelectorAll(".menu li.show-submenu")
-                        .forEach((item) => {
-                            if (item !== parent && !item.contains(parent)) {
-                                item.classList.remove("show-submenu");
-                            }
-                        });
+                    if (submenu) {
+                        // 🔁 ปิด submenu ที่เปิดอยู่ ยกเว้นตัวที่คลิก
+                        document
+                            .querySelectorAll(".menu li.show-submenu")
+                            .forEach((item) => {
+                                if (item !== parent && !item.contains(parent)) {
+                                    item.classList.remove("show-submenu");
+                                }
+                            });
 
-                    // Toggle current submenu
-                    parent.classList.toggle("show-submenu");
+                        // Toggle current submenu
+                        parent.classList.toggle("show-submenu");
+                    }
                 }
             });
         });
