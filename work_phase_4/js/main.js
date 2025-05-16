@@ -1,28 +1,18 @@
-/** to ensure the menu functions correctly without error */
 /**
- * IMPORTS
- * Keep track of external modules being used
+ * main.js
+ * Entry point script to initialize site-wide JS behavior
  */
+
+// IMPORTS
 import { setupMenu } from "./modules/menu.js";
 
-/**
- * CONSTANTS
- * Define values that don't change e.g. page titles, URLs, etc.
- */
+// CONSTANTS
 const PAGE_NAME = "index.js";
 
-/**
- * VARIABLES
- * Define values that will change e.g. user inputs, counters, etc.
- */
+// VARIABLES
 let message = "Page has fully loaded";
 
-/**
- * EVENT LISTENERS
- * The code that runs when a user interacts with the page
- */
-
-// when the page fully loads
+// EVENT LISTENERS
 document.addEventListener("DOMContentLoaded", () => {
     setupMenu(PAGE_NAME, message);
 });
