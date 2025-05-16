@@ -1,9 +1,12 @@
+/* PAGE TITLE HERO SECTION */
 .page-title {
     background-color: var(--warm-beige);
     padding: 2rem 1rem;
     text-align: center;
     border-bottom: 4px double var(--accent-color);
     margin-bottom: 2rem;
+    position: relative;
+    z-index: 0;
 }
 
 .page-title h1 {
@@ -12,4 +15,28 @@
     color: var(--text-color);
     text-transform: uppercase;
     letter-spacing: 2px;
+    margin: 0 auto;
+    line-height: 1.2;
+}
+
+/* TEXT STYLE FOR SECTION HEADING */
+.h1-heading {
+    text-align: center;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+    position: relative;
+    z-index: 0;
+}
+
+/* RESPONSIVE ADJUSTMENTS */
+@media screen and (max-width: 768px) {
+    .page-title h1 {
+        font-size: 1.75rem;
+        letter-spacing: 1px;
+    }
+
+    .h1-heading {
+        font-size: 1.1rem;
+    }
 }

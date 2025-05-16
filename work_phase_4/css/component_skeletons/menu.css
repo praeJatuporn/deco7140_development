@@ -1,0 +1,269 @@
+/* ========== Navigation Bar ========== */
+.navbar {
+    background-color: var(--primary-color);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+/* ========== Toggle Button ========== */
+.menu-toggle {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 1.75rem;
+    cursor: pointer;
+    position: absolute;
+    left: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1001;
+    padding: 0.5rem;
+    border-radius: 0.375rem;
+    transition: background-color 0.3s ease, outline 0.2s ease;
+}
+
+.menu-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.menu-toggle:focus-visible {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 2px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ========== Main Menu ========== */
+.menu {
+    list-style: none;
+    display: none;
+    flex-direction: column;
+    background-color: var(--primary-color);
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 999;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu li {
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.menu li:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.menu li:hover a {
+    background-color: var(--background-color);
+    color: #ffffff;
+    border-color: #000;
+}
+
+.menu a {
+    color: var(--text-color);
+    text-decoration: none;
+    display: block;
+    padding: 1rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    border: 2px solid transparent;
+    border-radius: 0.375rem;
+}
+
+.menu.show {
+    display: flex;
+}
+
+.menu a[aria-current="page"] {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* ========== Submenu ========== */
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    min-width: 180px;
+    z-index: 1002;
+}
+
+.submenu li a {
+    padding: 0.75rem 1rem;
+    display: block;
+    text-align: left;
+    color: #000;
+    background-color: #fff;
+    border: 2px solid transparent;
+    border-radius: 0.375rem;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.submenu li:hover a {
+    background-color: var(--accent-color);
+    color: #000;
+    border-color: var(--accent-color);
+    text-decoration: underline;
+}
+
+.menu li.has-submenu>a {
+    cursor: pointer;
+    position: relative;
+}
+
+/* ========== Desktop View ========== */
+@media (min-width: 768px) {
+    .navbar {
+        justify-content: center;
+    }
+
+    .menu {
+        display: flex !important;
+        position: static;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        box-shadow: none;
+        gap: 1.5rem;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .menu li {
+        padding: 0;
+    }
+
+    .menu li:hover {
+        background-color: transparent;
+    }
+
+    .menu li:hover a {
+        background-color: black;
+        color: #ffffff;
+    }
+
+    .menu a {
+        padding: 0.75rem 1rem;
+    }
+
+    .menu li.has-submenu:hover>.submenu {
+        display: block;
+    }
+
+    .menu li.has-submenu .submenu li.has-submenu:hover>.submenu {
+        display: block;
+        position: absolute;
+        left: 100%;
+        top: 0;
+    }
+
+    .menu li.has-submenu .submenu .submenu {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 100%;
+        background-color: #fff;
+        box-shadow: 0 4px 6px rgba(241, 240, 240, 0.1);
+        min-width: 180px;
+        z-index: 1003;
+    }
+
+    .submenu .submenu li a {
+        border: 2px solid transparent;
+        border-radius: 0.375rem;
+    }
+
+    .submenu .submenu li:hover a {
+        background-color: var(--accent-color);
+        color: #000;
+        border-color: var(--accent-color);
+        text-decoration: underline;
+    }
+}
+
+/* ========== Mobile View ========== */
+@media (max-width: 767px) {
+    nav .menu {
+        background-color: #000;
+    }
+
+    nav .menu a {
+        color: #fff;
+    }
+
+    nav .menu li:hover a {
+        background-color: var(--accent-color);
+        color: #000;
+    }
+
+    nav .menu a[aria-current="page"] {
+        background-color: var(--accent-color);
+        color: #000;
+        font-weight: bold;
+        text-decoration: underline;
+    }
+
+    .submenu {
+        width: 100%;
+        background-color: #fff;
+    }
+
+    .submenu li a {
+        padding-left: 2rem;
+        color: #000;
+        border: 2px solid transparent;
+        border-radius: 0.375rem;
+        background-color: #fff;
+    }
+
+    .menu li.has-submenu .submenu {
+        position: static;
+        display: none;
+        flex-direction: column;
+        box-shadow: none;
+        padding-left: 1rem;
+        width: 100%;
+        background-color: #fff;
+    }
+
+    .menu li.show-submenu>.submenu {
+        display: flex;
+        border: 2px solid #000;
+        border-radius: 0.375rem;
+    }
+
+    .menu .submenu .submenu {
+        display: none;
+        padding-left: 1.5rem;
+        background-color: #fff;
+    }
+
+    .menu .submenu li.show-submenu>.submenu {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .menu li.has-submenu .submenu li a:hover,
+    .menu .submenu .submenu li a:hover {
+        background-color: white;
+        color: #000;
+        border-color: var(--accent-color);
+    }
+}
