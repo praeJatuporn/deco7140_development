@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="css/base.css" />
         <link rel="stylesheet" href="css/layout.css" />
         <link rel="stylesheet" href="css/components.css" />
+        <link rel="stylesheet" href="css/page_css/profile.css" />
 
         <!-- Favicon -->
         <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
@@ -178,7 +179,58 @@
             <!-- Content Section -->
             <section>
                 <div class="container">
-                    <!-- Add page content here -->
+                    <article>
+                        <form
+                            id="community-form"
+                            enctype="multipart/form-data"
+                            aria-labelledby="form-title"
+                            role="form"
+                        >
+                            <h2 id="form-title">Member log in</h2>
+
+                            <!-- Full Name -->
+                            <div class="form-group">
+                                <label for="name">
+                                    Username: <span aria-hidden="true">*</span>
+                                </label>
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    required
+                                    aria-required="true"
+                                    autocomplete="name"
+                                />
+                            </div>
+
+                            <!-- Password -->
+                            <div class="form-group">
+                                <label for="email">
+                                    Password: <span aria-hidden="true">*</span>
+                                </label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    required
+                                    aria-required="true"
+                                    autocomplete="email"
+                                />
+                            </div>
+
+                            <!-- Submit Button -->
+                            <a
+                                href="profile_personal.html"
+                                role="button"
+                                aria-label="Log in"
+                            >
+                                <button type="button" class="login-button">
+                                    Log in
+                                </button>
+                            </a>
+                        </form>
+
+                    </article>
                 </div>
             </section>
         </main>
@@ -205,5 +257,6 @@
 
         <!-- JavaScript -->
         <script type="module" src="js/main.js"></script>
+        <script type="module" src="js/contact.js"></script>
     </body>
 </html>

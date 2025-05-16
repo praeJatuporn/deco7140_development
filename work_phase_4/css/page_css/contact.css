@@ -1,11 +1,11 @@
-/* ---------- Reset Box Sizing ---------- */
+/*  Reset Box Sizing  */
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
 
-/* ---------- Contact Form Container ---------- */
+/*  Contact Form Container */
 #community-form {
     max-width: 540px;
     margin: 4rem auto;
@@ -21,7 +21,7 @@
     text-align: left;
 }
 
-/* ---------- Form Labels ---------- */
+/* Form Labels */
 #community-form label {
     display: block;
     margin-bottom: 0.65rem;
@@ -30,7 +30,7 @@
     color: var(--text-color);
 }
 
-/* ---------- Inputs & Textarea ---------- */
+/* Inputs & Textarea */
 #community-form input[type="text"],
 #community-form input[type="email"],
 #community-form input[type="file"],
@@ -38,7 +38,6 @@
     width: 100%;
     padding: 0.85rem 1rem;
     margin-bottom: 0.5rem;
-    /* ลดจาก 1.2rem เพื่อให้ .form-description ชิดมากขึ้น */
     border: 2px solid var(--text-color);
     border-radius: 0.5rem;
     background-color: #fcfcfc;
@@ -49,7 +48,7 @@
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* ---------- Description Text ---------- */
+/* Description Text  */
 #community-form .form-description {
     margin-top: -0.3rem;
     margin-bottom: 1rem;
@@ -58,7 +57,7 @@
     line-height: 1.4;
 }
 
-/* ---------- Focus State ---------- */
+/*  Focus State */
 #community-form input:focus,
 #community-form textarea:focus {
     border-color: #336633;
@@ -66,13 +65,13 @@
     outline: none;
 }
 
-/* ---------- Textarea ---------- */
+/*  Textarea  */
 #community-form textarea {
     resize: vertical;
     min-height: 120px;
 }
 
-/* ---------- Submit Button ---------- */
+/*  Submit Button */
 #community-form button[type="submit"] {
     display: inline-block;
     background-color: #007a3d;

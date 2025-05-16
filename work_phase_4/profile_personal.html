@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="css/base.css" />
         <link rel="stylesheet" href="css/layout.css" />
         <link rel="stylesheet" href="css/components.css" />
-        <link rel="stylesheet" href="css/page_css/index.css" />
+        <link rel="stylesheet" href="css/page_css/profile.css" />
 
         <!-- Favicon -->
         <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
@@ -39,7 +39,11 @@
                     </ul>
                 </li>
                 <li class="has-submenu">
-                    <a href="profile.html" class="interactive-highlight">
+                    <a
+                        href="profile.html"
+                        class="interactive-highlight"
+                        aria-current="page"
+                    >
                         Profile▼
                     </a>
                     <ul class="submenu">
@@ -53,12 +57,9 @@
                         </li>
                     </ul>
                 </li>
+
                 <li class="has-submenu">
-                    <a
-                        href="connect.html"
-                        class="interactive-highlight"
-                        aria-current="page"
-                    >
+                    <a href="connect.html" class="interactive-highlight">
                         Connect▼
                     </a>
                     <ul class="submenu">
@@ -71,7 +72,6 @@
                         <li><a href="connect_chat.html">Chat</a></li>
                     </ul>
                 </li>
-
                 <li class="has-submenu">
                     <a href="calendar.html" class="interactive-highlight">
                         Event/Calendar▼
@@ -145,6 +145,7 @@
                         </li>
                     </ul>
                 </li>
+
                 <li>
                     <a
                         href="implementation_rationale.html"
@@ -165,20 +166,113 @@
 
         <main>
             <!-- Page Title + Hero Image -->
-            <section class="page-title">
-                <div class="container">
-                    <img
-                        src="images/connect/connect.png"
-                        alt="Crochet, embroidery, and knitting tools"
-                        class="hero-image"
-                    />
-                </div>
-            </section>
+            <section class="page-title"></section>
 
             <!-- Content Section -->
             <section>
                 <div class="container">
-                    <div class="center-wrapper"></div>
+                    <div class="profile-card">
+                        <h2 class="profile-heading">User Profile</h2>
+                        <div class="profile-info">
+                            <img
+                                src="images/Personal/user1.png"
+                                alt="User profile photo"
+                                class="profile-photo"
+                            />
+
+                            <div class="profile-details" id="profileDetails">
+                                <p>
+                                    <strong>Name:</strong>
+                                    <span class="value" data-key="name"
+                                        >Pear</span
+                                    >
+                                </p>
+                                <p>
+                                    <strong>Email:</strong>
+                                    <span class="value" data-key="email"
+                                        >pear@gmail.com</span
+                                    >
+                                </p>
+                                <p>
+                                    <strong>Location:</strong>
+                                    <span class="value" data-key="location"
+                                        >Brisbane, Australia</span
+                                    >
+                                </p>
+                                <p>
+                                    <strong>Hobbies:</strong>
+                                    <span class="value" data-key="hobbies">
+                                        Crochet, Pilates, Community Volunteering
+                                    </span>
+                                </p>
+
+                                <button class="edit-button">
+                                    Edit Profile
+                                </button>
+                            </div>
+
+                            <div class="profile-extra">
+                                <h3>About Me</h3>
+                                <p>
+                                    I recently moved to Australia from Thailand.
+                                    I'm passionate about craftwork and
+                                    connecting with like-minded people. I enjoy
+                                    exploring new communities, sharing ideas,
+                                    and learning from others.
+                                </p>
+
+                                <h3>Recent Activity</h3>
+                                <ul>
+                                    <li>Posted in discussion board</li>
+                                    <li>Uploaded new project</li>
+                                    <li>
+                                        Joined a group: "Thai Crafters in
+                                        Brisbane"
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--My Community Group-->
+                    <h2 class="profile-subheading">My Community Group</h2>
+                    <div class="community-group-grid">
+                        <div class="group-card">
+                            <a href="connect.html" aria-label="Group Profile">
+                                <img
+                                    src="images/Personal/community1.png"
+                                    alt="Group Profile"
+                                />
+                            </a>
+                            <p>Group Profile</p>
+                        </div>
+
+                        <div class="group-card">
+                            <a
+                                href="connect.html"
+                                aria-label="Discussion Board"
+                            >
+                                <img
+                                    src="images/Personal/community2.png"
+                                    alt="Discussion Board"
+                                />
+                            </a>
+                            <p>Discussion Board</p>
+                        </div>
+
+                        <div class="group-card">
+                            <a
+                                href="connect.html"
+                                aria-label="Chat with Members"
+                            >
+                                <img
+                                    src="images/Personal/community3.png"
+                                    alt="Chat with Members"
+                                />
+                            </a>
+                            <p>Chat</p>
+                        </div>
+                    </div>
                 </div>
             </section>
         </main>
