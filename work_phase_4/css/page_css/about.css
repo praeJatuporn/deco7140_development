@@ -1,0 +1,30 @@
+/* ------------ Intro Section Card ------------ */
+.intro-section {
+    background-color: var(--accent-color);
+    padding: 2rem 1rem;
+    margin: 2rem 0;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.intro-section .section__text {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    text-align: center;
+    color: var(--text-color);
+}
+
+.intro-section .section__text a {
+    color: var(--secondary-color);
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 0.1rem;
+}
+
+.intro-section .section__text a:hover,
+.intro-section .section__text a:focus {
+    background-color: var(--secondary-color);
+    color: #fff;
+    outline: none;
+}

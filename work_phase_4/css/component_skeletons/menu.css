@@ -1,43 +1,44 @@
-/* ========== Navigation Bar ========== */
+/* Navigation Bar */
 .navbar {
     background-color: var(--primary-color);
-    padding: 1rem 2rem;
+    padding: 1rem 1.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 1000;
+    overflow: visible;         
 }
 
-/* ========== Toggle Button ========== */
+/*Toggle Button  */
 .menu-toggle {
     background: none;
     border: none;
     color: var(--text-color);
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     cursor: pointer;
     position: absolute;
-    left: 1.5rem;
+    left: 1rem;
     top: 50%;
     transform: translateY(-50%);
     z-index: 1001;
-    padding: 0.5rem;
+    padding: 0.4rem;
     border-radius: 0.375rem;
     transition: background-color 0.3s ease, outline 0.2s ease;
 }
 
 .menu-toggle:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(0, 0, 0, 0.05);
 }
 
 .menu-toggle:focus-visible {
     outline: 3px solid var(--accent-color);
     outline-offset: 2px;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(0, 0, 0, 0.05);
 }
 
-/* ========== Main Menu ========== */
+/* Main Menu  */
 .menu {
     list-style: none;
     display: none;
@@ -48,13 +49,20 @@
     position: absolute;
     top: 100%;
     left: 0;
-    z-index: 999;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1100; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.menu.show {
+    display: flex;
+    z-index: 1100; 
 }
 
 .menu li {
-    position: relative;
+    margin: 0;
+    padding: 0;
     transition: background-color 0.3s ease;
+    position: relative;
 }
 
 .menu li:hover {
@@ -62,24 +70,21 @@
 }
 
 .menu li:hover a {
-    background-color: var(--background-color);
+    background-color: var(--text-color);
     color: #ffffff;
-    border-color: #000;
+    border: 1px solid #000;
 }
 
 .menu a {
     color: var(--text-color);
     text-decoration: none;
     display: block;
-    padding: 1rem;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.95rem;
     font-weight: 500;
-    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
-    border: 2px solid transparent;
-    border-radius: 0.375rem;
-}
-
-.menu.show {
-    display: flex;
+    line-height: 1.2;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    position: relative;
 }
 
 .menu a[aria-current="page"] {
@@ -87,59 +92,63 @@
     color: var(--text-color);
     font-weight: bold;
     text-decoration: underline;
+    border-radius: 0.375rem;
 }
 
-/* ========== Submenu ========== */
+/*  Submenu */
 .submenu {
     display: none;
     position: absolute;
-    top: 100%;
     left: 0;
-    background-color: #fff;
+    top: 100%;
+    background-color: var(--primary-color);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     list-style: none;
     min-width: 180px;
-    z-index: 1002;
+    z-index: 1200; 
 }
 
 .submenu li a {
     padding: 0.75rem 1rem;
     display: block;
     text-align: left;
-    color: #000;
-    background-color: #fff;
+    color: var(--text-color);
+    background-color: var(--primary-color);
     border: 2px solid transparent;
     border-radius: 0.375rem;
     transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 }
 
 .submenu li:hover a {
-    background-color: var(--accent-color);
-    color: #000;
-    border-color: var(--accent-color);
+    background-color: var(--primary-color);
+    color: black;
+    border: 2px solid white;
+    border-radius: 0.375rem;
     text-decoration: underline;
 }
 
-.menu li.has-submenu>a {
+.menu li.has-submenu > a {
     cursor: pointer;
     position: relative;
 }
 
-/* ========== Desktop View ========== */
+/* Desktop site */
 @media (min-width: 768px) {
     .navbar {
-        justify-content: center;
+        overflow: visible;
     }
 
     .menu {
         display: flex !important;
         position: static;
         flex-direction: row;
-        justify-content: center;
+        flex-wrap: nowrap;
+        justify-content: space-between;
         align-items: center;
+        width: 100%;
         background-color: transparent;
         box-shadow: none;
-        gap: 1.5rem;
+        gap: 1rem;
     }
 
     .menu-toggle {
@@ -147,27 +156,23 @@
     }
 
     .menu li {
+        flex: 1 1 auto;
         padding: 0;
     }
 
-    .menu li:hover {
-        background-color: transparent;
-    }
-
-    .menu li:hover a {
-        background-color: black;
-        color: #ffffff;
-    }
-
     .menu a {
-        padding: 0.75rem 1rem;
+        padding: 0.5rem 0.75rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-align: center;
     }
 
-    .menu li.has-submenu:hover>.submenu {
+    .menu li.has-submenu:hover > .submenu {
         display: block;
     }
 
-    .menu li.has-submenu .submenu li.has-submenu:hover>.submenu {
+    .menu li.has-submenu .submenu li.has-submenu:hover > .submenu {
         display: block;
         position: absolute;
         left: 100%;
@@ -179,29 +184,26 @@
         position: absolute;
         top: 0;
         left: 100%;
-        background-color: #fff;
+        background-color: var(--primary-color);
         box-shadow: 0 4px 6px rgba(241, 240, 240, 0.1);
         min-width: 180px;
         z-index: 1003;
     }
 
-    .submenu .submenu li a {
-        border: 2px solid transparent;
-        border-radius: 0.375rem;
-    }
-
+    /* Hover sub-submenu */
     .submenu .submenu li:hover a {
-        background-color: var(--accent-color);
-        color: #000;
-        border-color: var(--accent-color);
-        text-decoration: underline;
+        background-color: var(--primary-color);
+        color: black;
+        border: 2px solid white;
+        border-radius: 0.375rem;
     }
 }
 
-/* ========== Mobile View ========== */
+/*  Mobile site */
 @media (max-width: 767px) {
     nav .menu {
         background-color: #000;
+        z-index: 1100;
     }
 
     nav .menu a {
@@ -209,28 +211,25 @@
     }
 
     nav .menu li:hover a {
-        background-color: var(--accent-color);
-        color: #000;
+        background-color: var(--primary-color);
+        color: black;
     }
 
     nav .menu a[aria-current="page"] {
-        background-color: var(--accent-color);
-        color: #000;
+        background-color: #2c3e50;
+        color: #ffffff;
         font-weight: bold;
         text-decoration: underline;
     }
 
     .submenu {
         width: 100%;
-        background-color: #fff;
+        background-color: #e0f0ff;
     }
 
     .submenu li a {
         padding-left: 2rem;
-        color: #000;
-        border: 2px solid transparent;
-        border-radius: 0.375rem;
-        background-color: #fff;
+        color: black;
     }
 
     .menu li.has-submenu .submenu {
@@ -240,30 +239,39 @@
         box-shadow: none;
         padding-left: 1rem;
         width: 100%;
-        background-color: #fff;
+        background-color: var(--primary-color);
     }
 
-    .menu li.show-submenu>.submenu {
+    .menu li.show-submenu > .submenu {
         display: flex;
-        border: 2px solid #000;
+        border: 2px solid black;
         border-radius: 0.375rem;
+        z-index: 1100; 
     }
 
     .menu .submenu .submenu {
         display: none;
         padding-left: 1.5rem;
-        background-color: #fff;
     }
 
-    .menu .submenu li.show-submenu>.submenu {
+    .menu .submenu li.show-submenu > .submenu {
         display: flex;
         flex-direction: column;
+        z-index: 1100;
     }
 
-    .menu li.has-submenu .submenu li a:hover,
+    .menu li.has-submenu .submenu li a:hover {
+        background-color: var(--secondary-color);
+        color: #ffffff;
+        border: 2px solid var(--secondary-color);
+        border-radius: 0.375rem;
+    }
+
+    /* Hover sub-submenu on mobile */
     .menu .submenu .submenu li a:hover {
-        background-color: white;
-        color: #000;
-        border-color: var(--accent-color);
+        background-color: var(--secondary-color);
+        color: black;
+        border: 2px solid var(--secondary-color);
+        border-radius: 0.375rem;
     }
 }
