@@ -67,7 +67,11 @@
                     </ul>
                 </li>
                 <li class="has-submenu">
-                    <a href="calendar.html" class="interactive-highlight">
+                    <a
+                        href="calendar.html"
+                        class="interactive-highlight"
+                        aria-current="page"
+                    >
                         Event/Calendar▼
                     </a>
                     <ul class="submenu">
@@ -78,6 +82,7 @@
                         </li>
                         <li><a href="calendar_table.html">Calendar</a></li>
 
+                        <!--sub-submenu of event -->
                         <li class="has-submenu">
                             <a href="calendar_events.html">Events▼</a>
                             <ul class="submenu">
@@ -98,6 +103,7 @@
                         </li>
                     </ul>
                 </li>
+
                 <li class="has-submenu">
                     <a href="tutorial.html" class="interactive-highlight"
                         >Tutorial▼</a
@@ -116,7 +122,6 @@
                         <li><a href="resources.html">Resources</a></li>
                     </ul>
                 </li>
-
                 <li class="has-submenu">
                     <a href="gallery.html" class="interactive-highlight" a>
                         Gallery▼
@@ -129,10 +134,7 @@
                     </ul>
                 </li>
                 <li class="has-submenu">
-                    <a
-                        href="setting.html"
-                        class="interactive-highlight"
-                        aria-current="page"
+                    <a href="setting.html" class="interactive-highlight"
                         >Setting▼</a
                     >
                     <ul class="submenu">
@@ -143,7 +145,6 @@
                         </li>
                     </ul>
                 </li>
-
                 <li>
                     <a
                         href="implementation_rationale.html"
@@ -163,21 +164,63 @@
         <!-- End Navigation -->
 
         <main>
-            <!-- Page Title + Hero Image -->
-            <section class="page-title">
-                <div class="container">
-                    <img
-                        src="images/setting/settinghero.png"
-                        alt="Crochet, embroidery, and knitting tools"
-                        class="hero-image"
-                    />
-                </div>
-            </section>
-
             <!-- Content Section -->
             <section>
                 <div class="container">
-                    <!-- Add page content here -->
+                    <div class="event-section">
+                        <!--Search Bar -->
+                        <div class="event-search">
+                            <input
+                                type="text"
+                                id="event-search"
+                                placeholder="Search for events..."
+                                aria-label="Search events"
+                            />
+                            <button class="search-btn" aria-label="Search">
+                                🔍
+                            </button>
+                        </div>
+
+                        <!-- Calendar -->
+                        <div class="calendar">
+                            <!-- Month Navigation -->
+                            <div class="calendar-header">
+                                <button
+                                    class="prev-month"
+                                    aria-label="Previous month"
+                                >
+                                    &lt;
+                                </button>
+                                <span class="month-label" id="month-label"
+                                    >May 2025</span
+                                >
+                                <button
+                                    class="next-month"
+                                    aria-label="Next month"
+                                >
+                                    &gt;
+                                </button>
+                            </div>
+
+                            <!-- Day Names -->
+                            <div class="calendar-grid" id="calendar-grid">
+                                <div class="day-label">Mon</div>
+                                <div class="day-label">Tue</div>
+                                <div class="day-label">Wed</div>
+                                <div class="day-label">Thu</div>
+                                <div class="day-label">Fri</div>
+                                <div class="day-label">Sat</div>
+                                <div class="day-label">Sun</div>
+                            </div>
+                        </div>
+
+                        <!-- Subscribe Button -->
+                        <div class="subscribe-wrapper">
+                            <a href="#" class="subscribe-btn"
+                                >Subscribe to Calendar</a
+                            >
+                        </div>
+                    </div>
                 </div>
             </section>
         </main>
@@ -204,5 +247,6 @@
 
         <!-- JavaScript -->
         <script type="module" src="js/main.js"></script>
+        <script type="module" src="js/calendar_table.js"></script>
     </body>
 </html>

@@ -22,4 +22,36 @@ document.addEventListener("DOMContentLoaded", () => {
     if (editButton) {
         editButton.addEventListener("click", enableEditing);
     }
+
+    // 🔍 Event Search Functionality
+    const searchInput = document.getElementById("event-search");
+    const searchButton = document.querySelector(".search-btn");
+
+    if (searchInput && searchButton) {
+        searchButton.addEventListener("click", () => {
+            const keyword = searchInput.value.toLowerCase().trim();
+            const cells = document.querySelectorAll(".calendar-cell");
+
+            cells.forEach((cell) => {
+                const link = cell.querySelector(".event-link");
+                if (link) {
+                    const text = link.textContent.toLowerCase();
+                    if (text.includes(keyword)) {
+                        cell.classList.add("highlight");
+                    } else {
+                        cell.classList.remove("highlight");
+                    }
+                } else {
+                    cell.classList.remove("highlight");
+                }
+            });
+        });
+
+        // Press Enter to Search
+        searchInput.addEventListener("keypress", (e) => {
+            if (e.key === "Enter") {
+                searchButton.click();
+            }
+        });
+    }
 });
