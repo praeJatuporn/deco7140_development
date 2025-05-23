@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     form.addEventListener("submit", async (e) => {
         e.preventDefault();
-        feedback.textContent = "Submitting...";
+        feedback.textContent = "Sending your message...";
 
         const { success, data } = await postFormData(
             form,
@@ -20,14 +20,16 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
         if (success) {
-            feedback.textContent = data.message;
+            feedback.textContent = "Thank you! Your message has been sent successfully.";
+            feedback.className = "success";
             form.reset();
         } else {
-            feedback.textContent = data.message || "Something went wrong.";
+            feedback.textContent = data.message || "Oops! Something went wrong. Please try again.";
+            feedback.className = "error";
         }
     });
 
-    // Fetch and display community data (GET)
+    // Optional: Fetch and display messages or contacts (GET)
     const container = document.getElementById("community-list");
 
     fetchGetData(
@@ -39,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ).then((data) => {
         if (!data) {
             container.innerHTML =
-                '<p class="text-danger">Unable to load community members.</p>';
+                '<p class="text-danger">Unable to load messages.</p>';
             return;
         }
 

@@ -164,7 +164,6 @@
         <!-- End Navigation -->
 
         <main>
-            <!-- Page Title + Hero Image -->
             <section class="page-title">
                 <div class="container">
                     <img
@@ -216,10 +215,11 @@
 
                             <!-- Message -->
                             <div class="form-group">
-                                <label for="message"> Your Message </label>
+                                <label for="message">Your Message:</label>
                                 <textarea
                                     id="message"
                                     name="message"
+                                    required
                                     aria-describedby="message-desc"
                                 ></textarea>
                                 <p id="message-desc" class="visually-hidden">
@@ -248,12 +248,15 @@
                             </div>
 
                             <!-- Submit Button -->
-                            <button
-                                type="submit"
-                                aria-label="Submit your contact information to join the community"
-                            >
-                                Send
-                            </button>
+                            <div class="form-action">
+                                <button
+                                    type="submit"
+                                    class="button"
+                                    aria-label="Send your message"
+                                >
+                                    Send
+                                </button>
+                            </div>
                         </form>
 
                         <!-- Feedback Message -->
