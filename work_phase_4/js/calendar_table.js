@@ -13,8 +13,18 @@ function renderCalendar(date) {
     const month = date.getMonth();
 
     const monthNames = [
-        "January", "February", "March", "April", "May", "June",
-        "July", "August", "September", "October", "November", "December"
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
     ];
 
     monthLabel.textContent = `${monthNames[month]} ${year}`;
@@ -41,7 +51,7 @@ function renderCalendar(date) {
         if (day === 6 && month === 4 && year === 2025) {
             cell.innerHTML = `
                 <span class="date">6</span>
-                <a href="calendar_event.html" class="event-link with-tooltip">
+                <a href="events.html" class="event-link with-tooltip">
                     Embroidery Workshop<br><small>1:00–3:00 PM</small>
                     <div class="event-tooltip">
                         <img src="images/calendar/event3.png" alt="Embroidery workshop" />
@@ -54,12 +64,11 @@ function renderCalendar(date) {
                 </a>
             `;
         }
-
         // Crochet Workshop – May 22, 2025
         else if (day === 22 && month === 4 && year === 2025) {
             cell.innerHTML = `
                 <span class="date">22</span>
-                <a href="calendar_event.html" class="event-link with-tooltip">
+                <a href="events.html" class="event-link with-tooltip">
                     Crochet Workshop<br><small>10:00–12:00</small>
                     <div class="event-tooltip">
                         <img src="images/calendar/event1.png" alt="Crochet workshop" />
@@ -73,11 +82,29 @@ function renderCalendar(date) {
             `;
         }
 
+        // Crochet Workshop – May 20, 2025
+        else if (day === 20 && month === 4 && year === 2025) {
+            cell.innerHTML = `
+                <span class="date">20</span>
+                <a href="events.html" class="event-link with-tooltip">
+                    Scarf Workshop<br><small>10:00–12:00</small>
+                    <div class="event-tooltip">
+                        <img src="images/calendar/event4.png" alt="Scarf workshop" />
+                        <div class="tooltip-text">
+                            <strong>Scarf Workshop</strong><br />
+                            Join us for a relaxing session of group scarf at central library.<br />
+                            <small>May 20, 2025 – 10:00 to 12:00</small>
+                        </div>
+                    </div>
+                </a>
+            `;
+        }
+
         // Knitting Workshop – May 28, 2025
         else if (day === 28 && month === 4 && year === 2025) {
             cell.innerHTML = `
                 <span class="date">28</span>
-                <a href="calendar_event.html" class="event-link with-tooltip">
+                <a href="events.html" class="event-link with-tooltip">
                     Knitting Workshop<br><small>1:00–3:00 PM</small>
                     <div class="event-tooltip">
                         <img src="images/calendar/event2.png" alt="Knitting workshop" />

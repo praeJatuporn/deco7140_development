@@ -10,7 +10,13 @@
     z-index: 1;
 }
 
-.page-title .container {
+.page-title.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.container {
     max-width: 900px;
     margin: 0 auto;
     padding: 0 1rem;
@@ -130,4 +136,163 @@
     width: 24px;
     height: 24px;
     object-fit: contain;
+}
+
+/* 🧵 Event Layout (Image left + Content right) */
+.event-layout {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+/* ⬅️ Event Image Column */
+.event-image {
+    flex: 0 0 300px;
+    text-align: left;
+}
+
+.event-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    display: block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ➡️ Event Text Column */
+.event-content {
+    flex: 1;
+    max-width: 600px;
+}
+
+/* Title & Time */
+.event-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+    text-align: left;
+}
+
+.event-time {
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+/* Description */
+.event-description {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    text-align: left;
+    color: #333;
+}
+
+/* Buttons */
+.event-action {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.button {
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    background-color: var(--accent-color);
+    color: white;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+    background-color: #197407;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* 📱 Responsive Layout */
+@media screen and (max-width: 768px) {
+    .event-layout {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .event-content {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .event-title,
+    .event-time,
+    .event-description {
+        text-align: center;
+    }
+
+    .event-action {
+        justify-content: center;
+    }
+}
+
+/* ACTIVITY CARDS */
+.activity-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+    margin-block: 1rem;
+}
+
+.activity-card {
+    background-color: #fff;
+    border: 1px solid var(--accent-color);
+    border-radius: 1rem;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    transition: transform 0.2s ease;
+    margin-bottom: 1rem;
+}
+
+.activity-card:hover {
+    transform: translateY(-5px);
+}
+
+.activity-card img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 0.5rem;
+    object-fit: cover;
+}
+
+.activity-card p a {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: var(--text-color);
+    text-decoration: underline;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.2s ease;
+}
+
+.activity-card p a:hover {
+    color: var(--text-color);
+    background-color: gold;
+}
+
+@media (max-width: 767px) {
+    .activity-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
 }

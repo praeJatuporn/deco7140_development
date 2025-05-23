@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="css/base.css" />
         <link rel="stylesheet" href="css/layout.css" />
         <link rel="stylesheet" href="css/components.css" />
-        <link rel="stylesheet" href="css/page_css/contact.css" />
+        <link rel="stylesheet" href="css/page_css/event.css" />
 
         <!-- Favicon -->
         <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
@@ -68,7 +68,11 @@
                     </ul>
                 </li>
                 <li class="has-submenu">
-                    <a href="calendar.html" class="interactive-highlight">
+                    <a
+                        href="calendar.html"
+                        class="interactive-highlight"
+                        aria-current="page"
+                    >
                         Event/Calendar▼
                     </a>
                     <ul class="submenu">
@@ -79,6 +83,7 @@
                         </li>
                         <li><a href="calendar_table.html">Calendar</a></li>
 
+                        <!--sub-submenu of event -->
                         <li class="has-submenu">
                             <a href="events.html">Events▼</a>
                             <ul class="submenu">
@@ -99,6 +104,7 @@
                         </li>
                     </ul>
                 </li>
+
                 <li class="has-submenu">
                     <a href="tutorial.html" class="interactive-highlight"
                         >Tutorial▼</a
@@ -117,7 +123,6 @@
                         <li><a href="resources.html">Resources</a></li>
                     </ul>
                 </li>
-                <li></li>
                 <li class="has-submenu">
                     <a href="gallery.html" class="interactive-highlight" a>
                         Gallery▼
@@ -160,113 +165,9 @@
         <!-- End Navigation -->
 
         <main>
-            <!-- Page Title + Hero Image -->
-            <section class="page-title">
-                <div class="container">
-                    <img
-                        src="images/contact/contacthero.png"
-                        alt="Crochet, embroidery, and knitting tools"
-                        class="hero-image"
-                    />
-                    <article>
-                        <form
-                            id="community-form"
-                            enctype="multipart/form-data"
-                            aria-labelledby="form-title"
-                            role="form"
-                        >
-                            <h2 id="form-title">Contact Us</h2>
-                            <p>
-                                Please use the form below to send us a message
-                            </p>
-
-                            <!-- Full Name -->
-                            <div class="form-group">
-                                <label for="name">
-                                    Full Name: <span aria-hidden="true">*</span>
-                                </label>
-                                <input
-                                    type="text"
-                                    id="name"
-                                    name="name"
-                                    required
-                                    aria-required="true"
-                                    autocomplete="name"
-                                />
-                            </div>
-
-                            <!-- Email -->
-                            <div class="form-group">
-                                <label for="email">
-                                    Email: <span aria-hidden="true">*</span>
-                                </label>
-                                <input
-                                    type="email"
-                                    id="email"
-                                    name="email"
-                                    required
-                                    aria-required="true"
-                                    autocomplete="email"
-                                />
-                            </div>
-
-                            <!-- Message -->
-                            <div class="form-group">
-                                <label for="message"> Your Message </label>
-                                <textarea
-                                    id="message"
-                                    name="message"
-                                    aria-describedby="message-desc"
-                                ></textarea>
-                                <p id="message-desc" class="visually-hidden">
-                                    You can leave a message or question for us
-                                    here.
-                                </p>
-                            </div>
-
-                            <!-- Upload Photo -->
-                            <div class="form-group">
-                                <label for="photo">
-                                    Upload Photo
-                                    <span class="optional">(optional)</span>
-                                </label>
-                                <input
-                                    type="file"
-                                    id="photo"
-                                    name="photo"
-                                    accept="image/*"
-                                    aria-describedby="photo-desc"
-                                />
-                                <p id="photo-desc" class="visually-hidden">
-                                    Accepted formats: JPEG, PNG. Uploading a
-                                    photo is optional.
-                                </p>
-                            </div>
-
-                            <!-- Submit Button -->
-                            <button
-                                type="submit"
-                                aria-label="Submit your contact information to join the community"
-                            >
-                                Send
-                            </button>
-                        </form>
-
-                        <!-- Feedback Message -->
-                        <div
-                            id="form-feedback"
-                            aria-live="polite"
-                            aria-atomic="true"
-                        ></div>
-                    </article>
-                </div>
-            </section>
-
             <!-- Content Section -->
             <section>
-                <div class="container">
-                    <!-- Add page content here -->
-                </div>
+                <div class="container"></div>
             </section>
         </main>
 
@@ -276,11 +177,7 @@
                 <div class="footer-row">
                     <ul class="footer-links">
                         <li><a href="about.html">About Us</a></li>
-                        <li>
-                            <a href="contact.html" aria-current="page"
-                                >Contact Us</a
-                            >
-                        </li>
+                        <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                     <div class="footer-brand">
                         <img
@@ -296,6 +193,5 @@
 
         <!-- JavaScript -->
         <script type="module" src="js/main.js"></script>
-        <script type="module" src="js/contact.js"></script>
     </body>
 </html>

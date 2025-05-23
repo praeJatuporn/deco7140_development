@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="css/base.css" />
         <link rel="stylesheet" href="css/layout.css" />
         <link rel="stylesheet" href="css/components.css" />
-        <link rel="stylesheet" href="css/page_css/contact.css" />
+        <link rel="stylesheet" href="css/page_css/event.css" />
 
         <!-- Favicon -->
         <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
@@ -68,7 +68,11 @@
                     </ul>
                 </li>
                 <li class="has-submenu">
-                    <a href="calendar.html" class="interactive-highlight">
+                    <a
+                        href="calendar.html"
+                        class="interactive-highlight"
+                        aria-current="page"
+                    >
                         Event/Calendar▼
                     </a>
                     <ul class="submenu">
@@ -79,6 +83,7 @@
                         </li>
                         <li><a href="calendar_table.html">Calendar</a></li>
 
+                        <!--sub-submenu of event -->
                         <li class="has-submenu">
                             <a href="events.html">Events▼</a>
                             <ul class="submenu">
@@ -99,6 +104,7 @@
                         </li>
                     </ul>
                 </li>
+
                 <li class="has-submenu">
                     <a href="tutorial.html" class="interactive-highlight"
                         >Tutorial▼</a
@@ -117,7 +123,6 @@
                         <li><a href="resources.html">Resources</a></li>
                     </ul>
                 </li>
-                <li></li>
                 <li class="has-submenu">
                     <a href="gallery.html" class="interactive-highlight" a>
                         Gallery▼
@@ -160,112 +165,92 @@
         <!-- End Navigation -->
 
         <main>
-            <!-- Page Title + Hero Image -->
-            <section class="page-title">
-                <div class="container">
-                    <img
-                        src="images/contact/contacthero.png"
-                        alt="Crochet, embroidery, and knitting tools"
-                        class="hero-image"
-                    />
-                    <article>
-                        <form
-                            id="community-form"
-                            enctype="multipart/form-data"
-                            aria-labelledby="form-title"
-                            role="form"
-                        >
-                            <h2 id="form-title">Contact Us</h2>
-                            <p>
-                                Please use the form below to send us a message
-                            </p>
-
-                            <!-- Full Name -->
-                            <div class="form-group">
-                                <label for="name">
-                                    Full Name: <span aria-hidden="true">*</span>
-                                </label>
-                                <input
-                                    type="text"
-                                    id="name"
-                                    name="name"
-                                    required
-                                    aria-required="true"
-                                    autocomplete="name"
-                                />
-                            </div>
-
-                            <!-- Email -->
-                            <div class="form-group">
-                                <label for="email">
-                                    Email: <span aria-hidden="true">*</span>
-                                </label>
-                                <input
-                                    type="email"
-                                    id="email"
-                                    name="email"
-                                    required
-                                    aria-required="true"
-                                    autocomplete="email"
-                                />
-                            </div>
-
-                            <!-- Message -->
-                            <div class="form-group">
-                                <label for="message"> Your Message </label>
-                                <textarea
-                                    id="message"
-                                    name="message"
-                                    aria-describedby="message-desc"
-                                ></textarea>
-                                <p id="message-desc" class="visually-hidden">
-                                    You can leave a message or question for us
-                                    here.
-                                </p>
-                            </div>
-
-                            <!-- Upload Photo -->
-                            <div class="form-group">
-                                <label for="photo">
-                                    Upload Photo
-                                    <span class="optional">(optional)</span>
-                                </label>
-                                <input
-                                    type="file"
-                                    id="photo"
-                                    name="photo"
-                                    accept="image/*"
-                                    aria-describedby="photo-desc"
-                                />
-                                <p id="photo-desc" class="visually-hidden">
-                                    Accepted formats: JPEG, PNG. Uploading a
-                                    photo is optional.
-                                </p>
-                            </div>
-
-                            <!-- Submit Button -->
-                            <button
-                                type="submit"
-                                aria-label="Submit your contact information to join the community"
-                            >
-                                Send
-                            </button>
-                        </form>
-
-                        <!-- Feedback Message -->
-                        <div
-                            id="form-feedback"
-                            aria-live="polite"
-                            aria-atomic="true"
-                        ></div>
-                    </article>
-                </div>
-            </section>
-
             <!-- Content Section -->
             <section>
                 <div class="container">
-                    <!-- Add page content here -->
+                    <h2>Events</h2>
+                    <div class="event-layout">
+                        <div class="event-image">
+                            <img
+                                src="images/calendar/event3.png"
+                                alt="Embroidery workshop"
+                            />
+                        </div>
+
+                        <div class="event-content">
+                            <h2 class="event-title">Embroidery workshop</h2>
+                            <p class="event-time">
+                                May 6, 2025 – 1:00 to 3:00 PM AEST<br />at
+                                Central Library
+                            </p>
+
+                            <p class="event-description">
+                                Learn the art of embroidery in a fun and
+                                supportive setting. This workshop will guide you
+                                through essential stitching techniques to create
+                                your own handcrafted design, perfect for
+                                beginners and hobbyists alike.
+                            </p>
+
+                            <div class="event-action">
+                                <a href="#" class="button"
+                                    >📅 Add to calendar</a
+                                >
+                                <a href="book.html" class="button"
+                                    >Book this event</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                    <h3>Related events</h3>
+                    <div class="activity-grid">
+                        <div class="activity-card">
+                            <a href="events.html">
+                                <img
+                                    src="images/calendar/event1.png"
+                                    alt="Crochet workshop"
+                                />
+                            </a>
+
+                            <p>
+                                <a href="events.html"
+                                    >Join us for a relaxing session of group
+                                    crochet at Central library.<br />May 22,
+                                    2025 – 10:00 to 12:00</a
+                                >
+                            </p>
+                        </div>
+
+                        <div class="activity-card">
+                            <a href="events.html"></a>
+                            <img
+                                src="images/calendar/event2.png"
+                                alt="Knitting workshop"
+                            />
+                            <p>
+                                <a href="events.html"
+                                    >Practice and improve your knitting skills
+                                    with expert guidance at Central Library<br />May
+                                    28, 2025 – 1:00 to 3:00 PM
+                                </a>
+                            </p>
+                        </div>
+
+                        <div class="activity-card">
+                            <a href="events.html"></a>
+                            <img
+                                src="images/calendar/event4.png"
+                                alt=" Scarf Workshop"
+                            />
+                            <p>
+                                <a href="events.html">
+                                    Join us for a relaxing session of group
+                                    scarf at Central library<br />May 20, 2025 –
+                                    10:00am to 12:00pm</a
+                                >
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </section>
         </main>
@@ -276,11 +261,7 @@
                 <div class="footer-row">
                     <ul class="footer-links">
                         <li><a href="about.html">About Us</a></li>
-                        <li>
-                            <a href="contact.html" aria-current="page"
-                                >Contact Us</a
-                            >
-                        </li>
+                        <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                     <div class="footer-brand">
                         <img
@@ -296,6 +277,5 @@
 
         <!-- JavaScript -->
         <script type="module" src="js/main.js"></script>
-        <script type="module" src="js/contact.js"></script>
     </body>
 </html>

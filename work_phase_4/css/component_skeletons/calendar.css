@@ -132,8 +132,8 @@
 /* Responsive Mobile-friendly */
 @media screen and (max-width: 768px) {
     .calendar-grid {
-        grid-template-columns: repeat(5, 1fr);
-        /* 5 days per row */
+        grid-template-columns: repeat(3, 1fr);
+        /* 3 days per row */
     }
 
     .calendar-header {
