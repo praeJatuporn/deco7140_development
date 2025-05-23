@@ -1,11 +1,11 @@
-/*  Reset Box Sizing  */
+/* Reset Box Sizing  */
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
 
-/*  Contact Form Container */
+/* Contact Form Container */
 #community-form {
     max-width: 540px;
     margin: 4rem auto;
@@ -92,7 +92,7 @@
     transform: translateY(-2px);
 }
 
-/* ---------- Feedback Message ---------- */
+/*Feedback Message */
 #form-feedback {
     margin-top: 1.5rem;
     font-size: 1rem;
@@ -102,7 +102,7 @@
     line-height: 1.4;
 }
 
-/* ---------- Visually Hidden (for screen readers only) ---------- */
+/* Visually Hidden (for screen readers only)  */
 .visually-hidden {
     position: absolute;
     width: 1px;

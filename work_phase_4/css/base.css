@@ -6,27 +6,15 @@
     --primary-color: #eae2ba;
     /* Creamy Yellow */
     --secondary-color: #3498db;
-    /* Soft Blue (อาจเปลี่ยนถ้าอยากให้กลมกลืนมากขึ้น) */
+    /* Soft Blue 
     --accent-color: #aac8a0;
     /* Soft Sage Green */
     --text-color: black;
     /* Dark Desaturated Blue-Gray */
     --background-color: #FAF3E0;
     /* Warm Off-white */
-
-    /* เพิ่มเติมตามโทนธรรมชาติ */
-    --soft-pink: #D8A7B1;
-    /* Dusty Rose */
     --warm-beige: #F5F5DC;
     /* Beige อ่อน */
-    --terracotta: #E1A78C;
-    /* อิฐนุ่มนวล */
-    --sage-green: #C1DAD6;
-    /* เขียวซีด */
-    --mint-green: #D0F0C0;
-    /* เขียวมิ้นต์ */
-    --lavender: #D6CDEA;
-    /* ม่วงลาเวนเดอร์ */
 }
 
 /* Font Style */
