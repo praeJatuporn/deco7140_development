@@ -1,0 +1,27 @@
+.container {
+    text-align: center;
+}
+
+/* BUTTON STYLE */
+
+.button {
+    display: inline-block;
+    background-color: #124e05;
+    color: #ffffff;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border: 2px solid #ffffff;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-bottom: 1.5rem;
+}
+
+.button:hover {
+    background-color: #ffffff;
+    color: #124e05;
+    transform: translateY(-2px);
+    border-color: var(--text-color);
+}

@@ -16,7 +16,7 @@ form.addEventListener("change", (e) => {
     }
 });
 
-// ✅ Submit form
+// submit form
 form.addEventListener("submit", async (e) => {
     e.preventDefault();
     feedbackEl.textContent = "Sending...";

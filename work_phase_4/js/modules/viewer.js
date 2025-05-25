@@ -1,30 +1,58 @@
-//set up variables for showing the components
-const initGalleryViewer = () => {
-    const viewer = document.getElementById("viewer");
-    const viewerImg = document.getElementById("viewer-img");
-    const viewerCaption = document.getElementById("viewer-caption");
-    const closeBtn = document.getElementById("close-viewer");
+document.addEventListener("DOMContentLoaded", () => {
+    const imageItems = document.querySelectorAll(".image-item");
 
-    // Click on gallery image to open viewer
-    document.querySelectorAll(".gallery img").forEach((img) => {
-        img.addEventListener("click", () => {
-            viewerImg.src = img.src;
-            viewerImg.alt = img.alt;
-            viewerCaption.textContent = img.alt;
-            
-            //screen reader and prevent page scrolling when its opened
-            viewer.classList.add("open");
-            viewer.setAttribute("aria-hidden", "false");
-            document.body.style.overflow = "hidden";
-        });
+    // สร้าง modal viewer แบบ WCAG-compliant
+    const modal = document.createElement("div");
+    modal.classList.add("modal-viewer");
+    modal.innerHTML = `
+        <button class="close-btn" type="button" aria-label="Close viewer">&times;</button>
+        <img src="" alt="Expanded image" />
+        <p class="modal-caption" aria-live="polite"></p>
+    `;
+    document.body.appendChild(modal);
+
+    const modalImg = modal.querySelector("img");
+    const modalCaption = modal.querySelector(".modal-caption");
+    const closeBtn = modal.querySelector(".close-btn");
+
+    // เมื่อผู้ใช้คลิกที่ภาพ thumbnail
+    imageItems.forEach((item) => {
+        const img = item.querySelector("img");
+        const caption = item.querySelector("p");
+
+        if (img) {
+            img.addEventListener("click", () => {
+                modalImg.src = img.src;
+                modalImg.alt = img.alt || "Expanded image";
+                modalCaption.textContent = caption?.textContent || "";
+                modal.classList.add("active");
+                closeBtn.focus(); // เพิ่ม accessibility โดยโฟกัสปุ่ม
+            });
+        }
     });
 
-    // Close button controlling and screen reader, page can be scrolled.
+    // ปิด modal เมื่อกดปุ่มปิด
     closeBtn.addEventListener("click", () => {
-        viewer.classList.remove("open");
-        viewer.setAttribute("aria-hidden", "true");
-        document.body.style.overflow = "auto";
+        modal.classList.remove("active");
+        modalImg.src = "";
+        modalCaption.textContent = "";
     });
-};
 
-export { initGalleryViewer };
+    // ปิด modal เมื่อคลิกพื้นที่นอกภาพ
+    modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+            modal.classList.remove("active");
+            modalImg.src = "";
+            modalCaption.textContent = "";
+        }
+    });
+
+    // ปิด modal เมื่อกดปุ่ม ESC
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && modal.classList.contains("active")) {
+            modal.classList.remove("active");
+            modalImg.src = "";
+            modalCaption.textContent = "";
+        }
+    });
+});

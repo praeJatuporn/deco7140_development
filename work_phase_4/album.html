@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- CSS Linking -->
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/base.css" />
+        <link rel="stylesheet" href="css/layout.css" />
+        <link rel="stylesheet" href="css/components.css" />
+        <link rel="stylesheet" href="css/page_css/gallery.css" />
+        <link rel="stylesheet" href="css/page_css/album.css" />
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+
+        <title>Work Phase 4</title>
+    </head>
+    <body>
+        <!-- Responsive Navigation -->
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                ☰
+            </button>
+            <ul class="menu">
+                <li>
+                    <a href="./index.html" class="interactive-highlight"
+                        >Home</a
+                    >
+                </li>
+                <li class="has-submenu">
+                    <a href="about.html" class="interactive-highlight"
+                        >About▼</a
+                    >
+                    <ul class="submenu">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </li>
+                <li class="has-submenu">
+                    <a href="profile.html" class="interactive-highlight">
+                        Profile▼
+                    </a>
+                    <ul class="submenu">
+                        <li>
+                            <a href="profile_personal.html">Personal details</a>
+                        </li>
+                        <li>
+                            <a href="showcase.html">Showcase my Inspiration</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="has-submenu">
+                    <a href="connect.html" class="interactive-highlight">
+                        Connect▼
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="connect_group.html">Group Profile</a></li>
+                        <li>
+                            <a href="connect_discussion.html"
+                                >Discussion Boards</a
+                            >
+                        </li>
+                        <li><a href="connect_chat.html">Chat</a></li>
+                    </ul>
+                </li>
+                <li class="has-submenu">
+                    <a href="calendar.html" class="interactive-highlight">
+                        Event/Calendar▼
+                    </a>
+                    <ul class="submenu">
+                        <li>
+                            <a href="calendar_announcement.html"
+                                >Announcement</a
+                            >
+                        </li>
+                        <li><a href="calendar_table.html">Calendar</a></li>
+
+                        <li class="has-submenu">
+                            <a href="events.html">Events▼</a>
+                            <ul class="submenu">
+                                <li>
+                                    <a href="book.html">Book</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li><a href="calendar_host.html">Host an event</a></li>
+                        <li>
+                            <a href="calendar_share.html">Share an event</a>
+                        </li>
+                        <li>
+                            <a href="calendar_links.html"
+                                >Links to social media</a
+                            >
+                        </li>
+                    </ul>
+                </li>
+                <li class="has-submenu">
+                    <a href="tutorial.html" class="interactive-highlight"
+                        >Tutorial▼</a
+                    >
+                    <ul class="submenu">
+                        <li>
+                            <a href="paper_instruction.html"
+                                >Paper Instruction</a
+                            >
+                        </li>
+                        <li>
+                            <a href="instructional_videos.html"
+                                >Instructional Videos</a
+                            >
+                        </li>
+                        <li><a href="resources.html">Resources</a></li>
+                    </ul>
+                </li>
+                <li class="has-submenu">
+                    <a href="gallery.html" class="interactive-highlight">
+                        Gallery▼
+                    </a>
+                    <ul class="submenu">
+                        <li>
+                            <a href="album.html" aria-current="page">Album</a>
+                        </li>
+                        <li>
+                            <a href="gallery_uploads.html">Uploads Photos</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="has-submenu">
+                    <a href="setting.html" class="interactive-highlight"
+                        >Setting▼</a
+                    >
+                    <ul class="submenu">
+                        <li>
+                            <a href="preferred_language.html"
+                                >Preferred Language</a
+                            >
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a
+                        href="implementation_rationale.html"
+                        class="interactive-highlight"
+                        >Implementation</a
+                    >
+                </li>
+                <li>
+                    <a
+                        href="genai_mt_acknowledgement.html"
+                        class="interactive-highlight"
+                        >GenAI Acknowledge</a
+                    >
+                </li>
+            </ul>
+        </nav>
+        <!-- End Navigation -->
+
+        <main>
+            <!-- Content Section -->
+            <section>
+                <div class="container">
+                    <h2 class="album-heading">Our album</h2>
+                    <div class="album-search">
+                        <input
+                            type="text"
+                            id="album-search"
+                            placeholder="Search for album or image here..."
+                            aria-label="Search for album or image here"
+                        />
+                        <button class="search-btn" aria-label="Search">
+                            🔍
+                        </button>
+                    </div>
+
+                    <div class="activity-grid">
+                        <div class="activity-card">
+                            <img
+                                src="images/homepage/activity1.png"
+                                alt="Crochet"
+                            />
+                            <p>
+                                <a href="gallery.html">Crochet</a>
+                            </p>
+                        </div>
+
+                        <div class="activity-card">
+                            <img
+                                src="images/homepage/activity2.png"
+                                alt="Knitting"
+                            />
+                            <p>
+                                <a href="gallery.html">Knitting</a>
+                            </p>
+                        </div>
+
+                        <div class="activity-card">
+                            <img
+                                src="images/homepage/activity3.png"
+                                alt="Embroidery"
+                            />
+                            <p>
+                                <a href="gallery.html">Embroidery</a>
+                            </p>
+                        </div>
+                    </div>
+                    <h3 class="Showcase">Showcase of Members’ Work</h3>
+                    <section class="gallery-container">
+                        <div class="image-grid">
+                            <!-- Item 1 -->
+                            <div class="image-item">
+                                <img
+                                    src="images/gallery/gallery1.png"
+                                    alt="Knitting art showcase"
+                                />
+                                <p>
+                                    Knitting art by Pear<br />
+                                    <a
+                                        href="showcase.html"
+                                        class="link-highlight"
+                                        >Visit member inspiration</a
+                                    >
+                                </p>
+                                <div class="modal-viewer">
+                                    <button
+                                        class="close-btn"
+                                        type="button"
+                                        aria-label="Close viewer"
+                                    >
+                                        &times;
+                                    </button>
+                                    <img
+                                        src="images/gallery/gallery1.png"
+                                        alt="Knitting art showcase - Full View"
+                                    />
+                                </div>
+                            </div>
+
+                            <!-- Item 2 -->
+                            <div class="image-item">
+                                <img
+                                    src="images/gallery/gallery2.png"
+                                    alt="Knitting project showcase"
+                                />
+                                <p>
+                                    Knitting project by Lisa<br />
+                                    <a
+                                        href="#"
+                                        class="link-highlight"
+                                        onclick="event.preventDefault()"
+                                        >Visit member inspiration</a
+                                    >
+                                </p>
+
+                                <div class="modal-viewer">
+                                    <button
+                                        class="close-btn"
+                                        type="button"
+                                        aria-label="Close viewer"
+                                    >
+                                        &times;
+                                    </button>
+                                    <img
+                                        src="images/gallery/gallery2.png"
+                                        alt="Knitting project showcase - Full View"
+                                    />
+                                </div>
+                            </div>
+
+                            <!-- Item 3 -->
+                            <div class="image-item">
+                                <img
+                                    src="images/gallery/gallery3.png"
+                                    alt="Knitted sock in progress showcase"
+                                />
+                                <p>
+                                    Knitted sock in progress by Pear<br />
+                                    <a
+                                        href="showcase.html"
+                                        class="link-highlight"
+                                        >Visit member inspiration</a
+                                    >
+                                </p>
+
+                                <div class="modal-viewer">
+                                    <button
+                                        class="close-btn"
+                                        type="button"
+                                        aria-label="Close viewer"
+                                    >
+                                        &times;
+                                    </button>
+                                    <img
+                                        src="images/gallery/gallery3.png"
+                                        alt="Knitted sock in progress showcase - Full View"
+                                    />
+                                </div>
+                            </div>
+
+                            <!-- Item 4 -->
+                            <div class="image-item">
+                                <img
+                                    src="images/gallery/gallery4.png"
+                                    alt="Embroidery flower showcase"
+                                />
+                                <p>
+                                    Embroidery flower by Alice<br />
+                                    <a
+                                        href="#"
+                                        class="link-highlight"
+                                        onclick="event.preventDefault()"
+                                        >Visit member inspiration</a
+                                    >
+                                </p>
+
+                                <div class="modal-viewer">
+                                    <button
+                                        class="close-btn"
+                                        type="button"
+                                        aria-label="Close viewer"
+                                    >
+                                        &times;
+                                    </button>
+                                    <img
+                                        src="images/gallery/gallery4.png"
+                                        alt="Embroidery flower showcase - Full View"
+                                    />
+                                </div>
+                            </div>
+
+                            <!-- Item 5 -->
+                            <div class="image-item">
+                                <img
+                                    src="images/gallery/gallery5.png"
+                                    alt="Embroidered floral bag showcase"
+                                />
+                                <p>
+                                    Embroidered floral bag by Jimmy<br />
+                                    <a
+                                        href="#"
+                                        class="link-highlight"
+                                        onclick="event.preventDefault()"
+                                        >Visit member inspiration</a
+                                    >
+                                </p>
+
+                                <div class="modal-viewer">
+                                    <button
+                                        class="close-btn"
+                                        type="button"
+                                        aria-label="Close viewer"
+                                    >
+                                        &times;
+                                    </button>
+                                    <img
+                                        src="images/gallery/gallery5.png"
+                                        alt="Embroidered floral bag showcase - Full View"
+                                    />
+                                </div>
+                            </div>
+
+                            <!-- Item 6 -->
+                            <div class="image-item">
+                                <img
+                                    src="images/gallery/gallery6.png"
+                                    alt="Wool sock showcase"
+                                />
+                                <p>
+                                    Wool socks showcase by Alicia<br />
+                                    <a
+                                        href="#"
+                                        class="link-highlight"
+                                        onclick="event.preventDefault()"
+                                        >Visit member inspiration</a
+                                    >
+                                </p>
+
+                                <div class="modal-viewer">
+                                    <button
+                                        class="close-btn"
+                                        type="button"
+                                        aria-label="Close viewer"
+                                    >
+                                        &times;
+                                    </button>
+                                    <img
+                                        src="images/gallery/gallery6.png"
+                                        alt="Wool socks showcase - Full View"
+                                    />
+                                </div>
+                            </div>
+
+                            <!-- Item 7 -->
+                            <div class="image-item">
+                                <img
+                                    src="images/gallery/gallery7.png"
+                                    alt="Handmade Crochet Drawstring Bag showcase"
+                                />
+                                <p>
+                                    Handmade Crochet Drawstring Bag with Warm
+                                    Earth-Tone Stripes by James<br />
+                                    <a
+                                        href="#"
+                                        class="link-highlight"
+                                        onclick="event.preventDefault()"
+                                        >Visit member inspiration</a
+                                    >
+                                </p>
+
+                                <div class="modal-viewer">
+                                    <button
+                                        class="close-btn"
+                                        type="button"
+                                        aria-label="Close viewer"
+                                    >
+                                        &times;
+                                    </button>
+                                    <img
+                                        src="images/gallery/gallery7.png"
+                                        alt="WHandmade Crochet Drawstring Bag showcase - Full View"
+                                    />
+                                </div>
+                            </div>
+
+                            <!-- Item 8 -->
+                            <div class="image-item">
+                                <img
+                                    src="images/gallery/gallery8.png"
+                                    alt="Rainbow Crochet Placemat Showcase"
+                                />
+                                <p>
+                                    Rainbow Crochet Placemat by Libet<br />
+                                    <a
+                                        href="#"
+                                        class="link-highlight"
+                                        onclick="event.preventDefault()"
+                                        >Visit member inspiration</a
+                                    >
+                                </p>
+
+                                <div class="modal-viewer">
+                                    <button
+                                        class="close-btn"
+                                        type="button"
+                                        aria-label="Close viewer"
+                                    >
+                                        &times;
+                                    </button>
+                                    <img
+                                        src="images/gallery/gallery8.png"
+                                        alt="Rainbow Crochet Placemat Showcase - Full View"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="wrapper">
+                <div class="footer-row">
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                    <div class="footer-brand">
+                        <img
+                            src="images/favicon.ico"
+                            alt="Site logo"
+                            class="footer-logo"
+                        />
+                        <span>Handcrafts Hub</span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- JavaScript -->
+        <script type="module" src="js/main.js"></script>
+        <script type="module" src="js/modules/viewer.js"></script>
+    </body>
+</html>

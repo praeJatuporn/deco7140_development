@@ -1,6 +1,7 @@
 @import url("component_skeletons/menu.css");
 @import url("component_skeletons/calendar.css");
 
+
 /* PAGE TITLE + HERO IMAGE */
 .page-title {
     background-color: var(--warm-beige);
@@ -138,7 +139,7 @@
     object-fit: contain;
 }
 
-/* 🧵 Event Layout (Image left + Content right) */
+/* Event Layout (Image left + Content right) */
 .event-layout {
     display: flex;
     flex-wrap: wrap;
@@ -147,7 +148,7 @@
     padding: 2rem 0;
 }
 
-/* ⬅️ Event Image Column */
+/* Event Image Column */
 .event-image {
     flex: 0 0 300px;
     text-align: left;
@@ -161,7 +162,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* ➡️ Event Text Column */
+/* Event Text Column */
 .event-content {
     flex: 1;
     max-width: 600px;
@@ -218,7 +219,7 @@
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* 📱 Responsive Layout */
+/* Responsive Layout */
 @media screen and (max-width: 768px) {
     .event-layout {
         flex-direction: column;
