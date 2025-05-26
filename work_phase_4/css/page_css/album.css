@@ -165,7 +165,7 @@
 }
 
 
-/* 📱 Responsive adjustments */
+/* Responsive adjustments */
 @media (max-width: 768px) {
     .modal-viewer img {
         max-width: 90vw;

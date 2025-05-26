@@ -9,6 +9,11 @@
         <link rel="stylesheet" href="css/base.css" />
         <link rel="stylesheet" href="css/layout.css" />
         <link rel="stylesheet" href="css/components.css" />
+        <link rel="stylesheet" href="css/component_skeletons/card.css" />
+        <link
+            rel="stylesheet"
+            href="css/page_css/genai_mt_acknowledgement.css"
+        />
         <link
             rel="stylesheet"
             href="css/page_css/implementation_rationale.css"
@@ -37,7 +42,12 @@
                     >
                     <ul class="submenu">
                         <li><a href="about.html">About Us</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
+                        <li>
+                            <a href="faq.html" onclick="event.preventDefault();"
+                                >FAQ</a
+                            >
+                        </li>
+
                         <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </li>
@@ -50,7 +60,9 @@
                             <a href="profile_personal.html">Personal details</a>
                         </li>
                         <li>
-                            <a href="showcase.html"
+                            <a
+                                href="showcase.html"
+                                onclick="event.preventDefault();"
                                 >Showcase my Inspiration</a
                             >
                         </li>
@@ -63,11 +75,22 @@
                     <ul class="submenu">
                         <li><a href="connect_group.html">Group Profile</a></li>
                         <li>
-                            <a href="connect_discussion.html"
-                                >Discussion Boards</a
+                            <a
+                                href="connect_discussion.html"
+                                onclick="event.preventDefault();"
                             >
+                                Discussion Boards
+                            </a>
                         </li>
-                        <li><a href="connect_chat.html">Chat</a></li>
+
+                        <li>
+                            <a
+                                href="connect_chat.html"
+                                onclick="event.preventDefault();"
+                            >
+                                Chat
+                            </a>
+                        </li>
                     </ul>
                 </li>
                 <li class="has-submenu">
@@ -76,10 +99,14 @@
                     </a>
                     <ul class="submenu">
                         <li>
-                            <a href="calendar_announcement.html"
-                                >Announcement</a
+                            <a
+                                href="calendar_announcement.html"
+                                onclick="event.preventDefault();"
                             >
+                                Announcement
+                            </a>
                         </li>
+
                         <li><a href="calendar_table.html">Calendar</a></li>
 
                         <li class="has-submenu">
@@ -91,14 +118,29 @@
                             </ul>
                         </li>
 
-                        <li><a href="calendar_host.html">Host an event</a></li>
                         <li>
-                            <a href="calendar_share.html">Share an event</a>
+                            <a
+                                href="calendar_host.html"
+                                onclick="event.preventDefault();"
+                            >
+                                Host an event
+                            </a>
                         </li>
                         <li>
-                            <a href="calendar_links.html"
-                                >Links to social media</a
+                            <a
+                                href="calendar_share.html"
+                                onclick="event.preventDefault();"
                             >
+                                Share an event
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="calendar_links.html"
+                                onclick="event.preventDefault();"
+                            >
+                                Links to social media
+                            </a>
                         </li>
                     </ul>
                 </li>
@@ -113,11 +155,21 @@
                             >
                         </li>
                         <li>
-                            <a href="instructional_videos.html"
-                                >Instructional Videos</a
+                            <a
+                                href="instructional_videos.html"
+                                onclick="event.preventDefault();"
                             >
+                                Instructional Videos
+                            </a>
                         </li>
-                        <li><a href="resources.html">Resources</a></li>
+                        <li>
+                            <a
+                                href="resources.html"
+                                onclick="event.preventDefault();"
+                            >
+                                Resources
+                            </a>
+                        </li>
                     </ul>
                 </li>
                 <li class="has-submenu">
@@ -127,7 +179,12 @@
                     <ul class="submenu">
                         <li><a href="album.html">Album</a></li>
                         <li>
-                            <a href="gallery_uploads.html">Uploads Photos</a>
+                            <a
+                                href="gallery_uploads.html"
+                                onclick="event.preventDefault();"
+                            >
+                                Uploads Photos
+                            </a>
                         </li>
                     </ul>
                 </li>
@@ -137,9 +194,12 @@
                     >
                     <ul class="submenu">
                         <li>
-                            <a href="preferred_language.html"
-                                >Preferred Language</a
+                            <a
+                                href="preferred_language.html"
+                                onclick="event.preventDefault();"
                             >
+                                Preferred Language
+                            </a>
                         </li>
                     </ul>
                 </li>
@@ -163,18 +223,545 @@
         <!-- End Navigation -->
 
         <main>
-            <!-- Page Title + Hero Image -->
-            <section class="page-title">
-                <div class="container">
-                    <img
-                        src="images/Implementation.png"
-                        alt="Crochet, embroidery, and knitting tools"
-                        class="hero-image"
-                    />
+            <!-- Content Section -->
+            <section class="container">
+                <p class="p-content">Overview of Implementation</p>
+            </section>
+
+            <!-- Flippable Card Grid Section -->
+            <section class="card-grid-section">
+                <div class="card-grid">
+                    <!-- Card 1 -->
+                    <div class="card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <img
+                                    src="images/Implementation/color_scheme.png"
+                                    alt="Colour scheme"
+                                />
+                                <h3>Colour scheme changed</h3>
+                            </div>
+                            <div class="card-back">
+                                <p>
+                                    I adjusted the overall theme to use a warmer
+                                    and more visually comfortable colour
+                                    palette. The new colours are generally
+                                    softer and easier on the eyes compared to
+                                    the original design. Bright and fresh tones
+                                    were chosen to better reflect the creative
+                                    and handmade nature of the site, while still
+                                    maintaining the warmth associated with yarn
+                                    and handcrafts. Darker shades, such as black
+                                    and green, are reserved for key interactive
+                                    elements like buttons, helping to draw user
+                                    attention without overwhelming the
+                                    interface. Overall, this new palette
+                                    improves readability, adds personality, and
+                                    enhances the site's alignment with its
+                                    craft-inspired identity.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <img
+                                    src="images/Implementation/Form_button.png"
+                                    alt="coding picture"
+                                />
+                                <h3>Form and Button changed</h3>
+                            </div>
+                            <div class="card-back">
+                                <p>
+                                    Form fields were reorganised to improve
+                                    usability, and interactive features such as
+                                    album search and event booking were
+                                    implemented using JavaScript to enhance user
+                                    engagement. Button components were
+                                    redesigned to provide clearer affordance and
+                                    ensure better accessibility compliance. In
+                                    addition, colours and fonts were selected
+                                    based on WCAG guidelines, following an
+                                    accessibility assessment conducted using
+                                    Chrome’s accessibility tools.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <img
+                                    src="images/Implementation/menu.png"
+                                    alt="menu picture"
+                                />
+                                <h3>Menu changed</h3>
+                            </div>
+                            <div class="card-back">
+                                <p>
+                                    To support the large number of main and
+                                    sub-pages, the navigation was redesigned
+                                    from a traditional icon bar to a hamburger
+                                    menu. This provides a cleaner and more
+                                    organized layout, especially for mobile and
+                                    small screen users, helping community
+                                    members who access the site across various
+                                    devices. The update also meets the client’s
+                                    request for a scalable and user-friendly
+                                    interface that can grow with features like
+                                    events, group page, and tutorials. The
+                                    hamburger menu improves usability by
+                                    reducing visual clutter while maintaining
+                                    full access to all sections. It also
+                                    complies with WCAG guidelines through
+                                    keyboard navigation, screen reader
+                                    compatibility with ARIA labels, and clear
+                                    contrast and focus indicators for
+                                    interactive elements.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <img
+                                    src="images/Implementation/link.png"
+                                    alt="Error picture"
+                                />
+                                <h3>Links styles changed</h3>
+                            </div>
+                            <div class="card-back">
+                                <p>
+                                    Previously, most links on the website were
+                                    plain text styled only in blue, without
+                                    underline or hover effects. This made it
+                                    difficult for users to identify which
+                                    elements were interactive. To address this,
+                                    all links were enhanced with hover effects
+                                    and clearer visual indicators, such as
+                                    underlining or color transitions. These
+                                    changes improve affordance and ensure better
+                                    compliance with WCAG guidelines for
+                                    perceivable and operable user interface
+                                    components.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 5 -->
+                    <div class="card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <img
+                                    src="images/Implementation/gallery_page.png"
+                                    alt="Error picture"
+                                />
+                                <h3>Gallery page changed</h3>
+                            </div>
+                            <div class="card-back">
+                                <p>
+                                    The Gallery page was redesigned for better
+                                    usability and clarity. The search function
+                                    now uses a more intuitive icon with an input
+                                    placeholder guiding users to search for
+                                    images or albums. JavaScript enables
+                                    real-time searching across both albums and
+                                    member uploads. A new showcase section was
+                                    added below the main albums, displaying
+                                    member-shared images in a responsive grid.
+                                    Each image opens in a custom viewer for
+                                    clearer detail due to their small default
+                                    size. Clickable links below image captions
+                                    direct users to the member’s inspiration
+                                    page, improving navigation, promoting
+                                    engagement, and aligning with the client’s
+                                    goal to highlight community contributions.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="container">
+                <p class="p-content">Rationale for Implementation Decisions</p>
+            </section>
+            <!-- Flippable Card Grid Section -->
+            <section class="card-grid-section">
+                <div class="card-grid">
+                    <!-- Card 6 -->
+                    <div class="card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <img
+                                    src="images/Implementation/homepage.png"
+                                    alt="effective card picture"
+                                />
+                                <h3>Homepage</h3>
+                            </div>
+                            <div class="card-back">
+                                <p>
+                                    🎯Key Components: A hero image with the site
+                                    name creates a strong first impression,
+                                    followed by a short purpose text. Main
+                                    activities are shown using grid cards and
+                                    yellow-hover text links, leading to project
+                                    pages for admins and members. Green
+                                    call-to-action buttons encourage
+                                    exploration. The footer includes links like
+                                    About, Contact, and branding.
+                                </p>
+                                <p>
+                                    🎯Design Rationale: The design helps users
+                                    understand the community's focus with a
+                                    warm, creative tone matching the crafting
+                                    theme. It promotes participation and meets
+                                    client needs by fostering interaction. Clear
+                                    communication ensures accessibility for all
+                                    user levels.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 7 -->
+                    <div class="card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <img
+                                    src="images/Implementation/contact_us.png"
+                                    alt="ethical card picture"
+                                />
+                                <h3>contact us</h3>
+                            </div>
+                            <div class="card-back">
+                                <p>
+                                    🎯 Key Components: A hero image sets a
+                                    welcoming tone, followed by a clear title
+                                    and intro text. The contact form includes
+                                    labeled fields for name, email, message, and
+                                    optional photo upload. A styled "Send"
+                                    button submits the form, and feedback
+                                    appears below with success/error messaging.
+                                </p>
+                                <p>
+                                    🎯 Design Rationale: Designed for
+                                    user-friendly communication, the form
+                                    encourages member interaction while
+                                    maintaining simplicity. It supports client
+                                    needs by enabling outreach and feedback.
+                                    Accessibility is prioritized through proper
+                                    labels, live feedback, and keyboard-friendly
+                                    navigation, aligning with WCAG standards.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 8 -->
+                    <div class="card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <img
+                                    src="images/Implementation/Personal_detail.png"
+                                    alt="ethical card picture"
+                                />
+                                <h3>Personal detail</h3>
+                            </div>
+                            <div class="card-back">
+                                <p>
+                                    🎯Key Components: A structured form with
+                                    fields for name, email, location, hobbies
+                                    and some details about the user and photo
+                                    upload. A Submit button uses JavaScript to
+                                    provide real-time success or error feedback.
+                                </p>
+                                <p>
+                                    🎯Design Rationale: The form uses clear
+                                    labels, semantic structure, and accessible
+                                    inputs to support screen readers, and meet
+                                    WCAGhelping users confidently share personal
+                                    details and build community connections.
+                                </p>
+                                <p>
+                                    🎯Why: JavaScript simulates data editing and
+                                    submission without backend/API integration.
+                                    This suits project constraints and allows
+                                    intuitive interaction while demonstrating
+                                    functionality without live processing.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 9 -->
+                    <div class="card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <img
+                                    src="images/Implementation/group_profile.png"
+                                    alt="ethical card picture"
+                                />
+                                <h3>Group profile</h3>
+                            </div>
+                            <div class="card-back">
+                                <p>
+                                    🎯 Key Components: The Group Profile page
+                                    shows a group avatar, title, and description
+                                    for the “Craft Lovers Group.” Below are
+                                    visual cards of group posts with images,
+                                    captions, and simulated “Like” and “Comment”
+                                    buttons.
+                                </p>
+                                <p>
+                                    🎯 Design Rationale: Supports the client’s
+                                    goal to build community. The avatar adds
+                                    identity, and the post section encourages
+                                    sharing. The layout is accessible,
+                                    intuitive, and WCAG-compliant.
+                                </p>
+                                <p>
+                                    🎯 Why: Buttons are simulated due to project
+                                    limits. This shows intended interaction
+                                    without needing backend integration.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 10 -->
+                    <div class="card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <img
+                                    src="images/Implementation/calendar.png"
+                                    alt="ethical card picture"
+                                />
+                                <h3>Calendar</h3>
+                            </div>
+                            <div class="card-back">
+                                <p>
+                                    🎯Key Components: A grid calendar displays
+                                    daily events clearly. Using javaScript
+                                    search bar filters events in real-time. A
+                                    simulated “Subscribe to Calendar” button
+                                    hints at future features. Each event can be
+                                    click and link to the event page.
+                                </p>
+
+                                <p>
+                                    🎯 Design Rationale: The "Subscribe" button
+                                    reflects the client's Value 5 flexibility,
+                                    allowing users to manage schedules visually.
+                                </p>
+                                <p>
+                                    🎯 Why: Using only HTML/CSS, the button
+                                    offers a realistic simulation without
+                                    backend code, aligning with the project’s
+                                    scope.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 11 -->
+                    <div class="card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <img
+                                    src="images/Implementation/events.png"
+                                    alt="ethical card picture"
+                                />
+                                <h3>Events</h3>
+                            </div>
+                            <div class="card-back">
+                                <p>
+                                    🎯 Key Components: The page shows a grid of
+                                    cards with an image, short description, and
+                                    two buttons. “Book this Event” links to the
+                                    booking form, while “Add to Calendar”
+                                    simulates future calendar integration.
+                                </p>
+                                <p>
+                                    🎯 Design Rationale: Supports the client’s
+                                    goal of boosting participation through clear
+                                    event info and CTAs. The booking button
+                                    enables direct action, and the calendar
+                                    button hints at flexible scheduling (Client
+                                    Value 5).
+                                </p>
+                                <p>
+                                    🎯 Why: Calendar integration is out of
+                                    scope, so the button is styled only with
+                                    HTML/CSS. Booking uses simple navigation,
+                                    balancing real function and future potential
+                                    in a user-centered, accessible way.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 12 -->
+                    <div class="card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <img
+                                    src="images/Implementation/book.png"
+                                    alt="ethical card picture"
+                                />
+                                <h3>Book</h3>
+                            </div>
+                            <div class="card-back">
+                                <p>
+                                    🎯 Key Components: A clear event
+                                    registration form with a radio group inside
+                                    an accordion. A live feedback area shows
+                                    success or error messages after submission.
+                                </p>
+                                <p>
+                                    🎯 Design Rationale: Built for clarity and
+                                    accessibility using semantic elements and
+                                    ARIA. The accordion reduces clutter and
+                                    helps users select one event, meeting the
+                                    client’s need for intuitive registration.
+                                </p>
+                                <p>
+                                    🎯 Why: JavaScript simulates form submission
+                                    and feedback without backend use. This
+                                    matches project scope and offers a
+                                    realistic, engaging experience.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 13 -->
+                    <div class="card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <img
+                                    src="images/Implementation/paper.png"
+                                    alt="ethical card picture"
+                                />
+                                <h3>Paper Instruction</h3>
+                            </div>
+                            <div class="card-back">
+                                <p>
+                                    🎯Key Components:The Paper Instruction page
+                                    features article cards in a responsive grid.
+                                    Each card has an image, title, description,
+                                    and a styled “Learn more” button that
+                                    simulates real UI functionality.
+                                </p>
+                                <p>
+                                    🎯Design Rationale: The card layout supports
+                                    quick scanning and visual learning. Hover
+                                    effects add interactivity, and the green
+                                    “Learn more” button with color change on
+                                    hover aligns with other CTAs.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 14 -->
+                    <div class="card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <img
+                                    src="images/Implementation/album.png"
+                                    alt="ethical card picture"
+                                />
+                                <h3>Album</h3>
+                            </div>
+                            <div class="card-back">
+                                <p>
+                                    🎯 Key Components: The page includes a
+                                    section title, search bar with icon, and
+                                    three grid cards for main craft categories
+                                    (simulated clickable). A user showcase
+                                    displays member-uploaded images with
+                                    click-to-enlarge and captions linking to
+                                    full galleries (Pear only).
+                                </p>
+                                <p>
+                                    🎯 Design Rationale: Supports exploration
+                                    and connection through shared content. The
+                                    search bar aids discoverability, while hover
+                                    effects and image viewer improve usability
+                                    and interaction.
+                                </p>
+                                <p>
+                                    🎯 Why: JavaScript simulates real-time
+                                    filtering and image viewing. Though links
+                                    aren't live, they hint at future content
+                                    browsing features.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
-            <!-- Content Section -->
+            <!-- Content WCAG section -->
+            <section class="container">
+                <p class="p-content">
+                    WCAG Accessibility Implementation and IBM checker on Chrome
+                </p>
+            </section>
+
+            <!-- Flippable Card Grid Section -->
+            <section class="card-grid-section">
+                <div class="card-grid">
+                    <!-- Card 15 -->
+                    <div class="card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <img
+                                    src="images/Implementation/semantic.png"
+                                    alt="effective card picture"
+                                />
+                                <h3>Semantic HTML structure</h3>
+                            </div>
+                            <div class="card-back">
+                                <p>
+                                    The website’s HTML structure is designed
+                                    using semantic tags such as nav, main,
+                                    section, and article, allowing screen
+                                    readers to better interpret the content.
+                                    This clear categorization improves the
+                                    overall user experience, especially for
+                                    individuals with visual impairments.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 16 -->
+                    <div class="card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <img
+                                    src="images/Implementation/problem1.png"
+                                    alt="problem1 picture"
+                                />
+                                <h3>Violation scanned</h3>
+                            </div>
+                            <div class="card-back">
+                                <p>
+                                    "Accessible name does not match or contain
+                                    the visible label text"
+                                </p>
+                                <p>
+                                    To solve this, I changed the button label
+                                    from 'Member Log in' to 'Member Logging' to
+                                    match the aria-label on index.html."
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <section>
                 <div class="container">
                     <!-- container expression -->
@@ -206,6 +793,7 @@
 
         <!-- JavaScript -->
         <script type="module" src="js/main.js"></script>
+        <script type="module" src="js/genai.js"></script>
         <script type="module" src="js/implementation.js"></script>
     </body>
 </html>

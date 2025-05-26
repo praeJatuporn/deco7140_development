@@ -4,17 +4,11 @@
 /*color style for the whole page*/
 :root {
     --primary-color: #eae2ba;
-    /* Creamy Yellow */
     --secondary-color: #3498db;
-    /* Soft Blue 
     --accent-color: #aac8a0;
-    /* Soft Sage Green */
     --text-color: black;
-    /* Dark Desaturated Blue-Gray */
     --background-color: #FAF3E0;
-    /* Warm Off-white */
     --warm-beige: #F5F5DC;
-    /* Beige อ่อน */
 }
 
 /* Font Style */

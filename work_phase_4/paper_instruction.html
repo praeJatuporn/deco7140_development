@@ -9,9 +9,7 @@
         <link rel="stylesheet" href="css/base.css" />
         <link rel="stylesheet" href="css/layout.css" />
         <link rel="stylesheet" href="css/components.css" />
-        <link rel="stylesheet" href="css/page_css/index.css" />
-        <link rel="stylesheet" href="css/page_css/connect.css" />
-
+        <link rel="stylesheet" href="css/page_css/paper.css" />
         <!-- Favicon -->
         <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
 
@@ -62,11 +60,7 @@
                     </ul>
                 </li>
                 <li class="has-submenu">
-                    <a
-                        href="connect.html"
-                        class="interactive-highlight"
-                        aria-current="page"
-                    >
+                    <a href="connect.html" class="interactive-highlight">
                         Connect▼
                     </a>
                     <ul class="submenu">
@@ -90,12 +84,12 @@
                         </li>
                     </ul>
                 </li>
-
                 <li class="has-submenu">
                     <a href="calendar.html" class="interactive-highlight">
                         Event/Calendar▼
                     </a>
                     <ul class="submenu">
+                        <li></li>
                         <li>
                             <a
                                 href="calendar_announcement.html"
@@ -143,7 +137,10 @@
                     </ul>
                 </li>
                 <li class="has-submenu">
-                    <a href="tutorial.html" class="interactive-highlight"
+                    <a
+                        href="tutorial.html"
+                        class="interactive-highlight"
+                        aria-current="page"
                         >Tutorial▼</a
                     >
                     <ul class="submenu">
@@ -170,6 +167,7 @@
                         </li>
                     </ul>
                 </li>
+
                 <li class="has-submenu">
                     <a href="gallery.html" class="interactive-highlight" a>
                         Gallery▼
@@ -201,6 +199,7 @@
                         </li>
                     </ul>
                 </li>
+
                 <li>
                     <a
                         href="implementation_rationale.html"
@@ -220,23 +219,81 @@
         <!-- End Navigation -->
 
         <main>
-            <!-- Page Title + Hero Image -->
-            <section class="page-title">
-                <div class="container">
-                    <img
-                        src="images/connect/connect.png"
-                        alt="Crochet, embroidery, and knitting tools"
-                        class="hero-image"
-                    />
-                </div>
-            </section>
-
             <!-- Content Section -->
             <section>
                 <div class="container">
-                    <!-- Add page content here -->
+                    <section class="instruction-section">
+                        <h2>Recent Hints & Tips Articles</h2>
+                        <div class="instruction-grid">
+                            <!-- Article 1 -->
+                            <article class="instruction-card">
+                                <img
+                                    src="images/tutorial/paper1.png"
+                                    alt="Make Beanies that Fit"
+                                />
+                                <h3>Beanies that Fit Everytime</h3>
+                                <p>
+                                    Making beanies to fit perfectly can be
+                                    tricky. Follow our guide to get consistent
+                                    results every time.
+                                </p>
+                                <button class="read-more-btn">
+                                    Learn more
+                                </button>
+                            </article>
 
-                    <a href="album.html" class="button">Enter to group page</a>
+                            <!-- Article 2 -->
+                            <article class="instruction-card">
+                                <img
+                                    src="images/tutorial/paper2.png"
+                                    alt="Yarn Twist Guide"
+                                />
+                                <h3>Understanding Yarn Twist</h3>
+                                <p>
+                                    Learn how different yarn twists affect your
+                                    crochet and how to avoid common problems
+                                    like splitting.
+                                </p>
+                                <button class="read-more-btn">
+                                    Learn more
+                                </button>
+                            </article>
+
+                            <!-- Article 3 -->
+                            <article class="instruction-card">
+                                <img
+                                    src="images/tutorial/paper3.png"
+                                    alt="Crafting Goals"
+                                />
+                                <h3>Setting Crafting Goals</h3>
+                                <p>
+                                    Set your crochet goals for the new year with
+                                    helpful tips on planning, progress, and
+                                    motivation.
+                                </p>
+                                <button class="read-more-btn">
+                                    Learn more
+                                </button>
+                            </article>
+
+                            <!-- Article 4 -->
+                            <article class="instruction-card">
+                                <img
+                                    src="images/tutorial/paper4.png"
+                                    alt="Crochet While Traveling"
+                                />
+                                <h3>Travelling with Crochet</h3>
+                                <p>
+                                    Tips for packing and traveling with your
+                                    projects, whether you're flying,
+                                    road-tripping, or commuting.
+                                </p>
+                                <button class="read-more-btn">
+                                    Learn more
+                                </button>
+                            </article>
+                        </div>
+                    </section>
                 </div>
             </section>
         </main>

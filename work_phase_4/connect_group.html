@@ -62,15 +62,15 @@
                     </ul>
                 </li>
                 <li class="has-submenu">
-                    <a
-                        href="connect.html"
-                        class="interactive-highlight"
-                        aria-current="page"
-                    >
+                    <a href="connect.html" class="interactive-highlight">
                         Connect▼
                     </a>
                     <ul class="submenu">
-                        <li><a href="connect_group.html">Group Profile</a></li>
+                        <li>
+                            <a href="connect_group.html" aria-current="page"
+                                >Group Profile</a
+                            >
+                        </li>
                         <li>
                             <a
                                 href="connect_discussion.html"
@@ -220,23 +220,83 @@
         <!-- End Navigation -->
 
         <main>
-            <!-- Page Title + Hero Image -->
-            <section class="page-title">
-                <div class="container">
-                    <img
-                        src="images/connect/connect.png"
-                        alt="Crochet, embroidery, and knitting tools"
-                        class="hero-image"
-                    />
-                </div>
-            </section>
-
             <!-- Content Section -->
             <section>
                 <div class="container">
-                    <!-- Add page content here -->
+                    <section class="group-profile">
+                        <div class="group-header">
+                            <img
+                                src="images/connect/avatar.png"
+                                alt="Group avatar"
+                                class="group-avatar"
+                            />
+                            <div class="group-info">
+                                <h2>Craft Lovers Group</h2>
+                                <p>
+                                    We share passion for crochet, knitting, and
+                                    embroidery. Join us and be inspired!
+                                </p>
+                                <button
+                                    class="follow-btn"
+                                    aria-label="Follow this group"
+                                >
+                                    ➕ Follow Group
+                                </button>
+                            </div>
+                        </div>
 
-                    <a href="album.html" class="button">Enter to group page</a>
+                        <div class="group-posts">
+                            <div class="group-post">
+                                <img
+                                    src="images/connect/group_post1.png"
+                                    alt="Group Post Example"
+                                />
+                                <p class="caption">
+                                    Our latest scarf knitting workshop was a big
+                                    success!
+                                </p>
+                                <div class="post-actions">
+                                    <button
+                                        class="like-btn"
+                                        aria-label="Like this post"
+                                    >
+                                        👍 Like
+                                    </button>
+                                    <button
+                                        class="comment-btn"
+                                        aria-label="Comment on this post"
+                                    >
+                                        💬 Comment
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="group-post">
+                                <img
+                                    src="images/connect/group_post2.png"
+                                    alt="Group Post Example"
+                                />
+                                <p class="caption">
+                                    Here’s a sneak peek at the embroidery work
+                                    by Prae 🌸
+                                </p>
+                                <div class="post-actions">
+                                    <button
+                                        class="like-btn"
+                                        aria-label="Like this post"
+                                    >
+                                        👍 Like
+                                    </button>
+                                    <button
+                                        class="comment-btn"
+                                        aria-label="Comment on this post"
+                                    >
+                                        💬 Comment
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                 </div>
             </section>
         </main>
